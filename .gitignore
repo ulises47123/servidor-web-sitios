@@ -1,0 +1,40 @@
+# Notas privadas con claves y copias originales (no se publican)
+ESTADO-DEL-PROYECTO.txt
+_privado_local/
+
+# Datos y configuración locales de cada equipo
+web/_datos/
+web/_backups/
+**/config.local.php
+dev/config.local.php
+dev/mariadb-data/
+dev/tmp/
+dev/logs/
+*.log
+
+# Versión vieja (tenía claves en config.php y archivos subidos)
+viejo/
+
+# Multimedia pesada
+*.mp3
+*.mp4
+*.webm
+*.m4a
+*.ogg
+*.opus
+*.wav
+*.flac
+
+# Varios
+.env
+.env.*
+*.sql
+*.sql.gz
+*.tar.gz
+Thumbs.db
+
+# Las migraciones sí se suben
+!web/_app/sql/*.sql
+dev/nginx/logs/
+dev/nginx/temp/
+*.pid

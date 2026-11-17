@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>La Olla – Recetario casero</title>
+<meta name="description" content="La Olla es un recetario casero con recetas argentinas y clásicas explicadas paso a paso, como empanadas, milanesas, ñoquis y flan. Buscá por ingrediente, ajustá las porciones y cociná en modo cocina.">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#fbf6ef" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#1b1611" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/estilos.css">
+<script src="js/portada.js" defer></script>
+</head>
+<body>
+<a class="saltar" href="#contenido">Saltar al contenido</a>
+<header class="cabecera">
+  <div class="contenedor">
+    <a class="marca" href="index.html"><svg viewBox="0 0 32 32" width="32" height="32" aria-hidden="true" focusable="false"><path d="M11 7 q-2 -2 0 -4 M16 7 q-2 -2 0 -4 M21 7 q-2 -2 0 -4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" opacity=".7"/><rect x="3" y="11" width="26" height="3" rx="1.5" fill="currentColor"/><path d="M5 15 h22 v6 a7 7 0 0 1 -7 7 h-8 a7 7 0 0 1 -7 -7 z" fill="currentColor"/><rect x="1" y="16" width="4" height="3" rx="1.5" fill="currentColor"/><rect x="27" y="16" width="4" height="3" rx="1.5" fill="currentColor"/><rect x="14" y="8" width="4" height="3" rx="1.5" fill="currentColor"/></svg><span>La Olla</span></a>
+    <nav class="nav-principal" aria-label="Principal">
+      <ul><li><a href="index.html" aria-current="page">Inicio</a></li><li><a href="index.html#recetas">Recetas</a></li><li><a href="categorias/index.html">Categorías</a></li></ul>
+    </nav>
+  </div>
+</header>
+<main id="contenido" tabindex="-1">
+<div class="contenedor">
+<section class="intro">
+  <h1>Recetas caseras, explicadas sin vueltas</h1>
+  <p class="bajada">En La Olla juntamos las recetas de siempre: empanadas, milanesas, ñoquis, guisos y postres de la abuela. Cada una tiene calculadora de porciones, modo cocina paso a paso y versión para imprimir.</p>
+</section>
+
+<section class="bloque" aria-labelledby="titulo-buscar">
+  <h2 id="titulo-buscar" class="vh">Buscar recetas</h2>
+  <form id="filtros" class="filtros" role="search" hidden>
+    <div class="campo-busqueda">
+      <label for="q">Buscar por nombre o ingrediente</label>
+      <input type="search" id="q" name="q" placeholder="Por ejemplo: papa, dulce de leche, pollo" autocomplete="off">
+    </div>
+    <div>
+      <label for="categoria">Categoría</label>
+      <select id="categoria" name="categoria"><option value="">Todas</option><option value="platos-principales">Platos principales</option><option value="pastas">Pastas</option><option value="sopas-y-guisos">Sopas y guisos</option><option value="ensaladas">Ensaladas</option><option value="postres">Postres</option><option value="panaderia">Panadería</option><option value="bebidas">Bebidas</option></select>
+    </div>
+    <div>
+      <label for="dificultad">Dificultad</label>
+      <select id="dificultad" name="dificultad"><option value="">Todas</option><option value="Fácil">Fácil</option><option value="Media">Media</option><option value="Difícil">Difícil</option></select>
+    </div>
+    <div>
+      <label for="tiempo">Tiempo máximo</label>
+      <select id="tiempo" name="tiempo"><option value="">Sin límite</option><option value="15">Hasta 15 min</option><option value="30">Hasta 30 min</option><option value="45">Hasta 45 min</option><option value="60">Hasta 1 hora</option><option value="90">Hasta 1 h 30 min</option><option value="120">Hasta 2 horas</option></select>
+    </div>
+    <div class="fila-botones">
+      <p class="estado-resultados" id="estado-resultados" aria-live="polite"></p>
+      <button type="reset" class="boton boton-sec">Limpiar filtros</button>
+    </div>
+  </form>
+</section>
+
+<section class="bloque" aria-labelledby="titulo-categorias">
+  <h2 id="titulo-categorias">Categorías</h2>
+  <ul class="chips">
+<li><a class="chip" href="categorias/platos-principales.html">Platos principales <span class="num">(4)</span></a></li>
+<li><a class="chip" href="categorias/pastas.html">Pastas <span class="num">(1)</span></a></li>
+<li><a class="chip" href="categorias/sopas-y-guisos.html">Sopas y guisos <span class="num">(2)</span></a></li>
+<li><a class="chip" href="categorias/ensaladas.html">Ensaladas <span class="num">(1)</span></a></li>
+<li><a class="chip" href="categorias/postres.html">Postres <span class="num">(4)</span></a></li>
+<li><a class="chip" href="categorias/panaderia.html">Panadería <span class="num">(2)</span></a></li>
+<li><a class="chip" href="categorias/bebidas.html">Bebidas <span class="num">(1)</span></a></li>
+  </ul>
+</section>
+
+<section class="bloque" id="recetas" aria-labelledby="titulo-recetas">
+  <h2 id="titulo-recetas">Todas las recetas</h2>
+  <div id="sin-resultados" class="sin-resultados" hidden>
+    <p>No encontramos recetas con esos filtros. Probá con otra palabra o sacá algún filtro.</p>
+    <button type="button" class="boton" id="limpiar-vacio">Limpiar filtros</button>
+  </div>
+  <ul class="grilla" id="lista-recetas">
+<li class="tarjeta" data-categoria="platos-principales" data-dificultad="Media" data-tiempo="120" data-buscar="empanadas de carne platos principales empanadas de horno con relleno de carne picada, cebolla, huevo duro y aceitunas, condimentadas con comino y pimenton. 500 g de carne picada comun o especial 2 cebollas medianas 1 morron rojo 3 cebollas de verdeo 2 cucharadas de aceite 1 cucharadita de comino 1 cucharadita de pimenton dulce ½ cucharadita de aji molido sal y pimienta a gusto 2 huevos duros 12 aceitunas verdes (opcional) 12 tapas para empanadas de horno 1 huevo para pintar">
+  <div class="ilustracion"><svg class="ilustra" viewBox="0 0 240 160" width="240" height="160" aria-hidden="true" focusable="false"><ellipse cx="120" cy="105" rx="102" ry="48" fill="#5a3a1f" opacity=".13"/><ellipse cx="120" cy="96" rx="100" ry="50" fill="#fffaf2" stroke="#e1d1bb" stroke-width="3"/><ellipse cx="120" cy="96" rx="72" ry="34" fill="none" stroke="#efe3d1" stroke-width="2"/><g transform="translate(82 98) rotate(-10)"><path d="M-38 10 A38 30 0 0 1 38 10 Q0 18 -38 10 Z" fill="#e3a65a" stroke="#b9773a" stroke-width="2"/><path d="M-34 7 A34 26 0 0 1 34 7" fill="none" stroke="#c4843f" stroke-width="5" stroke-dasharray="3 5" stroke-linecap="round"/><ellipse cx="-6" cy="-5" rx="11" ry="4" fill="#f3c98a" opacity=".75"/></g><g transform="translate(158 94) rotate(12)"><path d="M-38 10 A38 30 0 0 1 38 10 Q0 18 -38 10 Z" fill="#e3a65a" stroke="#b9773a" stroke-width="2"/><path d="M-34 7 A34 26 0 0 1 34 7" fill="none" stroke="#c4843f" stroke-width="5" stroke-dasharray="3 5" stroke-linecap="round"/><ellipse cx="-6" cy="-5" rx="11" ry="4" fill="#f3c98a" opacity=".75"/></g><g transform="translate(120 118)"><path d="M-38 10 A38 30 0 0 1 38 10 Q0 18 -38 10 Z" fill="#e3a65a" stroke="#b9773a" stroke-width="2"/><path d="M-34 7 A34 26 0 0 1 34 7" fill="none" stroke="#c4843f" stroke-width="5" stroke-dasharray="3 5" stroke-linecap="round"/><ellipse cx="-6" cy="-5" rx="11" ry="4" fill="#f3c98a" opacity=".75"/></g><circle cx="186" cy="120" r="5" fill="#5b7a2e"/><circle cx="196" cy="114" r="4" fill="#6f9138"/></svg></div>
+  <div class="tarjeta-cuerpo">
+    <span class="etiqueta">Platos principales</span>
+    <h3><a href="recetas/empanadas-de-carne.html">Empanadas de carne</a></h3>
+    <p>Empanadas de horno con relleno de carne picada, cebolla, huevo duro y aceitunas, condimentadas con comino y pimentón.</p>
+    <ul class="meta">
+      <li><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M8 4.5 V8 L10.5 9.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span class="vh">Tiempo total: </span>2 h</li>
+      <li><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><rect x="2" y="9" width="3" height="5" rx="1" fill="currentColor"/><rect x="6.5" y="6" width="3" height="8" rx="1" fill="currentColor"/><rect x="11" y="3" width="3" height="11" rx="1" fill="currentColor"/></svg><span class="vh">Dificultad: </span>Media</li>
+      <li><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="5" r="2.8" fill="currentColor"/><path d="M2.5 14 a5.5 5 0 0 1 11 0 z" fill="currentColor"/></svg><span class="vh">Rinde: </span>12 empanadas</li>
+    </ul>
+  </div>
+</li>
+<li class="tarjeta" data-categoria="platos-principales" data-dificultad="Fácil" data-tiempo="40" data-buscar="milanesas platos principales milanesas de carne bien finitas, con rebozado de huevo, ajo y perejil y pan rallado crocante. fritas o al horno. 800 g de nalga o peceto cortado en bifes finos 3 huevos 2 dientes de ajo 2 cucharadas de perejil picado 300 g de pan rallado sal y pimienta a gusto aceite para freir, o rocio vegetal si las haces al horno limon para servir, a gusto">
+  <div class="ilustracion"><svg class="ilustra" viewBox="0 0 240 160" width="240" height="160" aria-hidden="true" focusable="false"><ellipse cx="120" cy="105" rx="102" ry="48" fill="#5a3a1f" opacity=".13"/><ellipse cx="120" cy="96" rx="100" ry="50" fill="#fffaf2" stroke="#e1d1bb" stroke-width="3"/><ellipse cx="120" cy="96" rx="72" ry="34" fill="none" stroke="#efe3d1" stroke-width="2"/><path d="M58 92 C58 64 108 58 138 64 C174 70 186 92 172 110 C158 128 100 128 78 120 C62 114 58 104 58 92 Z" fill="#c9893f" stroke="#a66a2a" stroke-width="2"/><path d="M72 92 C74 76 106 70 132 74" fill="none" stroke="#dca35c" stroke-width="5" stroke-linecap="round" opacity=".8"/><g fill="#a5692b"><circle cx="90" cy="100" r="1.8"/><circle cx="110" cy="90" r="1.8"/><circle cx="130" cy="104" r="1.8"/><circle cx="150" cy="92" r="1.8"/><circle cx="104" cy="112" r="1.8"/><circle cx="142" cy="114" r="1.8"/><circle cx="120" cy="80" r="1.8"/></g><path d="M162 120 A22 22 0 0 0 206 120 Z" fill="#f5d33f" stroke="#d6ad1c" stroke-width="2"/><path d="M184 120 L172 132 M184 120 L184 140 M184 120 L196 132" stroke="#e6c22c" stroke-width="1.5"/><g fill="#4f8a3a"><circle cx="70" cy="122" r="4"/><circle cx="78" cy="127" r="3.5"/><circle cx="64" cy="128" r="3"/></g></svg></div>
+  <div class="tarjeta-cuerpo">
+    <span class="etiqueta">Platos principales</span>
+    <h3><a href="recetas/milanesas.html">Milanesas</a></h3>
+    <p>Milanesas de carne bien finitas, con rebozado de huevo, ajo y perejil y pan rallado crocante. Fritas o al horno.</p>
+    <ul class="meta">
+      <li><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M8 4.5 V8 L10.5 9.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span class="vh">Tiempo total: </span>40 min</li>
+      <li><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><rect x="2" y="9" width="3" height="5" rx="1" fill="currentColor"/><rect x="6.5" y="6" width="3" height="8" rx="1" fill="currentColor"/><rect x="11" y="3" width="3" height="11" rx="1" fill="currentColor"/></svg><span class="vh">Dificultad: </span>Fácil</li>
+      <li><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="5" r="2.8" fill="currentColor"/><path d="M2.5 14 a5.5 5 0 0 1 11 0 z" fill="currentColor"/></svg><span class="vh">Rinde: </span>4 porciones</li>
+    </ul>
+  </div>
+</li>
+<li class="tarjeta" data-categoria="pastas" data-dificultad="Media" data-tiempo="75" data-buscar="noquis de papa pastas noquis caseros livianos, hechos con papa, poca harina y un huevo. ideales para el 29 o cualquier domingo. 1000 g de papas harinosas (tipo negra o blanca) 300 g de harina 0000, aproximadamente 1 huevo 1 cucharadita de sal nuez moscada a gusto salsa de tomate o la salsa que prefieras, para servir queso rallado a gusto">
+  <div class="ilustracion"><svg class="ilustra" viewBox="0 0 240 160" width="240" height="160" aria-hidden="true" focusable="false"><ellipse cx="120" cy="105" rx="102" ry="48" fill="#5a3a1f" opacity=".13"/><ellipse cx="120" cy="96" rx="100" ry="50" fill="#fffaf2" stroke="#e1d1bb" stroke-width="3"/><ellipse cx="120" cy="96" rx="72" ry="34" fill="none" stroke="#efe3d1" stroke-width="2"/><path d="M62 98 C58 74 100 66 128 68 C166 70 186 86 178 104 C170 122 120 126 92 120 C72 116 64 110 62 98 Z" fill="#c8452f"/><path d="M80 90 C90 80 120 76 140 80" fill="none" stroke="#dd6a4f" stroke-width="5" stroke-linecap="round" opacity=".8"/><g transform="translate(92 92) rotate(-20)"><rect x="-8" y="-5.5" width="16" height="11" rx="5" fill="#f2dfae" stroke="#cfb272" stroke-width="1.5"/><path d="M-4 -4 v8 M0 -4 v8 M4 -4 v8" stroke="#d8bf86" stroke-width="1.2"/></g><g transform="translate(112 86) rotate(10)"><rect x="-8" y="-5.5" width="16" height="11" rx="5" fill="#f2dfae" stroke="#cfb272" stroke-width="1.5"/><path d="M-4 -4 v8 M0 -4 v8 M4 -4 v8" stroke="#d8bf86" stroke-width="1.2"/></g><g transform="translate(134 90) rotate(-5)"><rect x="-8" y="-5.5" width="16" height="11" rx="5" fill="#f2dfae" stroke="#cfb272" stroke-width="1.5"/><path d="M-4 -4 v8 M0 -4 v8 M4 -4 v8" stroke="#d8bf86" stroke-width="1.2"/></g><g transform="translate(156 98) rotate(25)"><rect x="-8" y="-5.5" width="16" height="11" rx="5" fill="#f2dfae" stroke="#cfb272" stroke-width="1.5"/><path d="M-4 -4 v8 M0 -4 v8 M4 -4 v8" stroke="#d8bf86" stroke-width="1.2"/></g><g transform="translate(100 108) rotate(15)"><rect x="-8" y="-5.5" width="16" height="11" rx="5" fill="#f2dfae" stroke="#cfb272" stroke-width="1.5"/><path d="M-4 -4 v8 M0 -4 v8 M4 -4 v8" stroke="#d8bf86" stroke-width="1.2"/></g><g transform="translate(122 104) rotate(-15)"><rect x="-8" y="-5.5" width="16" height="11" rx="5" fill="#f2dfae" stroke="#cfb272" stroke-width="1.5"/><path d="M-4 -4 v8 M0 -4 v8 M4 -4 v8" stroke="#d8bf86" stroke-width="1.2"/></g><g transform="translate(144 112) rotate(8)"><rect x="-8" y="-5.5" width="16" height="11" rx="5" fill="#f2dfae" stroke="#cfb272" stroke-width="1.5"/><path d="M-4 -4 v8 M0 -4 v8 M4 -4 v8" stroke="#d8bf86" stroke-width="1.2"/></g><g transform="translate(82 104) rotate(35)"><rect x="-8" y="-5.5" width="16" height="11" rx="5" fill="#f2dfae" stroke="#cfb272" stroke-width="1.5"/><path d="M-4 -4 v8 M0 -4 v8 M4 -4 v8" stroke="#d8bf86" stroke-width="1.2"/></g><g fill="#4f8a3a"><ellipse cx="124" cy="72" rx="8" ry="4" transform="rotate(-25 124 72)"/><ellipse cx="134" cy="74" rx="7" ry="3.5" transform="rotate(30 134 74)"/></g><g fill="#fff4d6"><circle cx="108" cy="98" r="1.6"/><circle cx="130" cy="98" r="1.6"/><circle cx="150" cy="104" r="1.6"/><circle cx="96" cy="100" r="1.6"/></g></svg></div>
+  <div class="tarjeta-cuerpo">
+    <span class="etiqueta">Pastas</span>
+    <h3><a href="recetas/noquis-de-papa.html">Ñoquis de papa</a></h3>
+    <p>Ñoquis caseros livianos, hechos con papa, poca harina y un huevo. Ideales para el 29 o cualquier domingo.</p>
+    <ul class="meta">
+      <li><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M8 4.5 V8 L10.5 9.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span class="vh">Tiempo total: </span>1 h 15 min</li>
+      <li><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><rect x="2" y="9" width="3" height="5" rx="1" fill="currentColor"/><rect x="6.5" y="6" width="3" height="8" rx="1" fill="currentColor"/><rect x="11" y="3" width="3" height="11" rx="1" fill="currentColor"/></svg><span class="vh">Dificultad: </span>Media</li>
+      <li><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="5" r="2.8" fill="currentColor"/><path d="M2.5 14 a5.5 5 0 0 1 11 0 z" fill="currentColor"/></svg><span class="vh">Rinde: </span>4 porciones</li>
+    </ul>
+  </div>
+</li>
+<li class="tarjeta" data-categoria="sopas-y-guisos" data-dificultad="Fácil" data-tiempo="90" data-buscar="guiso de lentejas sopas y guisos guiso de lentejas bien casero, con panceta, chorizo colorado y verduras. rendidor y perfecto para el invierno. 500 g de lentejas secas 200 g de panceta ahumada 2 chorizos colorados 1 cebolla grande 1 morron rojo 2 zanahorias 2 papas medianas 400 g de tomate triturado 1500 ml de caldo de verduras caliente 1 cucharada de pimenton dulce 2 hojas de laurel 2 cucharadas de aceite sal, pimienta y aji molido a gusto">
+  <div class="ilustracion"><svg class="ilustra" viewBox="0 0 240 160" width="240" height="160" aria-hidden="true" focusable="false"><g fill="none" stroke="#b9a693" stroke-width="3" stroke-linecap="round" opacity=".75"><path d="M98 40 q-8 -8 0 -16 q8 -8 0 -16"/><path d="M122 36 q-8 -8 0 -16 q8 -8 0 -16"/><path d="M146 40 q-8 -8 0 -16 q8 -8 0 -16"/></g><ellipse cx="120" cy="146" rx="70" ry="9" fill="#5a3a1f" opacity=".14"/><path d="M35 70 Q40 142 120 144 Q200 142 205 70 Z" fill="#3f7f78"/><path d="M52 104 Q80 130 120 132" fill="none" stroke="#5b9a92" stroke-width="5" stroke-linecap="round" opacity=".7"/><ellipse cx="120" cy="70" rx="85" ry="26" fill="#3f7f78" stroke="#2c5d58" stroke-width="3"/><ellipse cx="120" cy="71" rx="76" ry="20" fill="#8a552c"/><g fill="#6b4220"><ellipse cx="80" cy="70" rx="3" ry="2"/><ellipse cx="96" cy="64" rx="3" ry="2"/><ellipse cx="112" cy="78" rx="3" ry="2"/><ellipse cx="140" cy="62" rx="3" ry="2"/><ellipse cx="160" cy="74" rx="3" ry="2"/><ellipse cx="176" cy="66" rx="3" ry="2"/><ellipse cx="66" cy="76" rx="3" ry="2"/><ellipse cx="128" cy="84" rx="3" ry="2"/></g><g fill="#b23f2a" stroke="#8e2f1e" stroke-width="1.5"><circle cx="100" cy="74" r="7"/><circle cx="150" cy="70" r="7"/><circle cx="170" cy="80" r="6"/></g><g fill="#e7a08f"><circle cx="98" cy="72" r="1.4"/><circle cx="148" cy="68" r="1.4"/><circle cx="102" cy="76" r="1.2"/></g><g fill="#e7832c"><circle cx="124" cy="66" r="5"/><circle cx="82" cy="82" r="4.5"/><circle cx="186" cy="72" r="4"/></g><g fill="#f1d9a6"><rect x="132" y="76" width="9" height="8" rx="2"/><rect x="64" y="64" width="9" height="8" rx="2"/></g></svg></div>
+  <div class="tarjeta-cuerpo">
+    <span class="etiqueta">Sopas y guisos</span>
+    <h3><a href="recetas/guiso-de-lentejas.html">Guiso de lentejas</a></h3>
+    <p>Guiso de lentejas bien casero, con panceta, chorizo colorado y verduras. Rendidor y perfecto para el invierno.</p>
+    <ul class="meta">
+      <li><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M8 4.5 V8 L10.5 9.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span class="vh">Tiempo total: </span>1 h 30 min</li>
+      <li><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><rect x="2" y="9" width="3" height="5" rx="1" fill="currentColor"/><rect x="6.5" y="6" width="3" height="8" rx="1" fill="currentColor"/><rect x="11" y="3" width="3" height="11" rx="1" fill="currentColor"/></svg><span class="vh">Dificultad: </span>Fácil</li>
+      <li><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="5" r="2.8" fill="currentColor"/><path d="M2.5 14 a5.5 5 0 0 1 11 0 z" fill="currentColor"/></svg><span class="vh">Rinde: </span>6 porciones</li>
+    </ul>
+  </div>
+</li>
+<li class="tarjeta" data-categoria="platos-principales" data-dificultad="Media" data-tiempo="50" data-buscar="tortilla de papas platos principales tortilla de papas con cebolla, jugosa por dentro y dorada por fuera, con el truco para darla vuelta sin miedo. 1000 g de papas 1 cebolla grande 6 huevos aceite abundante para cocinar las papas sal a gusto">
+  <div class="ilustracion"><svg class="ilustra" viewBox="0 0 240 160" width="240" height="160" aria-hidden="true" focusable="false"><ellipse cx="120" cy="105" rx="102" ry="48" fill="#5a3a1f" opacity=".13"/><ellipse cx="120" cy="96" rx="100" ry="50" fill="#fffaf2" stroke="#e1d1bb" stroke-width="3"/><ellipse cx="120" cy="96" rx="72" ry="34" fill="none" stroke="#efe3d1" stroke-width="2"/><ellipse cx="120" cy="99" rx="66" ry="32" fill="#c98d2c"/><ellipse cx="120" cy="93" rx="66" ry="32" fill="#e9b84f" stroke="#c58f2b" stroke-width="3"/><g fill="#d39b35" opacity=".8"><ellipse cx="96" cy="84" rx="8" ry="4"/><ellipse cx="140" cy="102" rx="10" ry="4"/><ellipse cx="150" cy="80" rx="6" ry="3"/><ellipse cx="94" cy="106" rx="6" ry="3"/></g><path d="M120 93 L186 93 M120 93 L146 123" stroke="#b37d22" stroke-width="2.5" stroke-linecap="round"/><g fill="#4f8a3a"><circle cx="112" cy="90" r="2"/><circle cx="126" cy="98" r="2"/><circle cx="104" cy="98" r="1.6"/></g></svg></div>
+  <div class="tarjeta-cuerpo">
+    <span class="etiqueta">Platos principales</span>
+    <h3><a href="recetas/tortilla-de-papas.html">Tortilla de papas</a></h3>
+    <p>Tortilla de papas con cebolla, jugosa por dentro y dorada por fuera, con el truco para darla vuelta sin miedo.</p>
+    <ul class="meta">
+      <li><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M8 4.5 V8 L10.5 9.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span class="vh">Tiempo total: </span>50 min</li>
+      <li><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><rect x="2" y="9" width="3" height="5" rx="1" fill="currentColor"/><rect x="6.5" y="6" width="3" height="8" rx="1" fill="currentColor"/><rect x="11" y="3" width="3" height="11" rx="1" fill="currentColor"/></svg><span class="vh">Dificultad: </span>Media</li>
+      <li><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="5" r="2.8" fill="currentColor"/><path d="M2.5 14 a5.5 5 0 0 1 11 0 z" fill="currentColor"/></svg><span class="vh">Rinde: </span>4 porciones</li>
+    </ul>
+  </div>
+</li>
+<li class="tarjeta" data-categoria="panaderia" data-dificultad="Media" data-tiempo="120" data-buscar="pizza casera panaderia pizza de molde con masa esponjosa, salsa de tomate y mucha muzzarella, como la de las pizzerias de barrio. 500 g de harina 000 7 g de levadura seca 320 ml de agua tibia 10 g de sal 1 cucharadita de azucar 3 cucharadas de aceite de oliva 400 g de tomate triturado 1 diente de ajo 1 cucharadita de oregano seco 400 g de muzzarella aceitunas verdes a gusto sal, aceite de oliva y mas oregano a gusto">
+  <div class="ilustracion"><svg class="ilustra" viewBox="0 0 240 160" width="240" height="160" aria-hidden="true" focusable="false"><ellipse cx="120" cy="106" rx="104" ry="46" fill="#5a3a1f" opacity=".13"/><ellipse cx="120" cy="96" rx="104" ry="48" fill="#b98250" stroke="#8f5f34" stroke-width="3"/><rect x="210" y="88" width="26" height="12" rx="5" fill="#b98250" stroke="#8f5f34" stroke-width="3"/><ellipse cx="120" cy="92" rx="84" ry="40" fill="#d9a05b" stroke="#b9803f" stroke-width="2"/><ellipse cx="120" cy="92" rx="73" ry="33" fill="#c4452f"/><path d="M60 92 C62 72 96 64 120 66 C150 66 178 76 180 94 C178 112 150 120 120 120 C88 120 60 110 60 92 Z" fill="#f4d47c"/><g fill="#e9b94f" opacity=".8"><ellipse cx="96" cy="84" rx="9" ry="4"/><ellipse cx="146" cy="102" rx="11" ry="4"/><ellipse cx="132" cy="78" rx="7" ry="3"/></g><path d="M120 92 L120 59 M120 92 L193 98 M120 92 L58 112" stroke="#a46a2e" stroke-width="2" opacity=".55"/><g fill="#4f6b2a"><ellipse cx="88" cy="96" rx="5.5" ry="4.5"/><ellipse cx="140" cy="84" rx="5.5" ry="4.5"/><ellipse cx="156" cy="104" rx="5.5" ry="4.5"/><ellipse cx="106" cy="76" rx="5.5" ry="4.5"/><ellipse cx="116" cy="108" rx="5.5" ry="4.5"/></g><g fill="#2f4116"><circle cx="88" cy="96" r="1.8"/><circle cx="140" cy="84" r="1.8"/><circle cx="156" cy="104" r="1.8"/><circle cx="106" cy="76" r="1.8"/><circle cx="116" cy="108" r="1.8"/></g></svg></div>
+  <div class="tarjeta-cuerpo">
+    <span class="etiqueta">Panadería</span>
+    <h3><a href="recetas/pizza-casera.html">Pizza casera</a></h3>
+    <p>Pizza de molde con masa esponjosa, salsa de tomate y mucha muzzarella, como la de las pizzerías de barrio.</p>
+    <ul class="meta">
+      <li><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M8 4.5 V8 L10.5 9.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span class="vh">Tiempo total: </span>2 h</li>
+      <li><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><rect x="2" y="9" width="3" height="5" rx="1" fill="currentColor"/><rect x="6.5" y="6" width="3" height="8" rx="1" fill="currentColor"/><rect x="11" y="3" width="3" height="11" rx="1" fill="currentColor"/></svg><span class="vh">Dificultad: </span>Media</li>
+      <li><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="5" r="2.8" fill="currentColor"/><path d="M2.5 14 a5.5 5 0 0 1 11 0 z" fill="currentColor"/></svg><span class="vh">Rinde: </span>2 pizzas</li>
+    </ul>
+  </div>
+</li>
+<li class="tarjeta" data-categoria="ensaladas" data-dificultad="Fácil" data-tiempo="35" data-buscar="ensalada cesar ensaladas lechuga crocante, pollo grillado, croutons caseros y un aderezo cremoso con anchoas, limon y parmesano. 1 planta de lechuga romana 2 pechugas de pollo 4 rebanadas de pan del dia anterior 2 cucharadas de aceite de oliva 40 g de queso parmesano en lascas sal y pimienta a gusto 3 cucharadas de mayonesa 2 filetes de anchoa 1 diente de ajo 1 cucharada de jugo de limon 1 cucharadita de mostaza 1 cucharadita de salsa inglesa 3 cucharadas de aceite de oliva 30 g de queso parmesano rallado pimienta negra a gusto">
+  <div class="ilustracion"><svg class="ilustra" viewBox="0 0 240 160" width="240" height="160" aria-hidden="true" focusable="false"><ellipse cx="120" cy="146" rx="70" ry="9" fill="#5a3a1f" opacity=".14"/><path d="M35 70 Q40 142 120 144 Q200 142 205 70 Z" fill="#3f7f78"/><path d="M52 104 Q80 130 120 132" fill="none" stroke="#5b9a92" stroke-width="5" stroke-linecap="round" opacity=".7"/><ellipse cx="120" cy="70" rx="85" ry="26" fill="#3f7f78" stroke="#2c5d58" stroke-width="3"/><ellipse cx="120" cy="71" rx="76" ry="20" fill="#9cc56a"/><g stroke="#4c8130" stroke-width="1.5"><path d="M60 70 C70 46 104 48 110 64 C100 74 76 78 60 70 Z" fill="#7fb84e"/><path d="M104 62 C116 38 152 42 156 62 C142 72 118 72 104 62 Z" fill="#a7d06f"/><path d="M148 66 C162 46 192 52 188 70 C176 78 158 76 148 66 Z" fill="#6aa84f"/><path d="M84 80 C96 64 124 66 128 80 C114 88 96 88 84 80 Z" fill="#8fc45c"/></g><g fill="#e3b77c" stroke="#c2924f" stroke-width="1"><rect x="128" y="74" width="26" height="7" rx="3" transform="rotate(-12 141 77)"/><rect x="70" y="62" width="24" height="7" rx="3" transform="rotate(10 82 65)"/></g><g fill="#d9a05b" stroke="#b07a3e" stroke-width="1"><rect x="112" y="56" width="10" height="10" rx="2" transform="rotate(15 117 61)"/><rect x="160" y="62" width="10" height="10" rx="2" transform="rotate(-20 165 67)"/><rect x="98" y="74" width="9" height="9" rx="2"/></g><g fill="#fbf3dc" stroke="#e2d3a8" stroke-width=".8"><path d="M140 58 l10 -3 l-2 6 z"/><path d="M86 72 l9 2 l-6 4 z"/><path d="M170 74 l8 -4 l0 6 z"/></g></svg></div>
+  <div class="tarjeta-cuerpo">
+    <span class="etiqueta">Ensaladas</span>
+    <h3><a href="recetas/ensalada-cesar.html">Ensalada César</a></h3>
+    <p>Lechuga crocante, pollo grillado, croutons caseros y un aderezo cremoso con anchoas, limón y parmesano.</p>
+    <ul class="meta">
+      <li><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M8 4.5 V8 L10.5 9.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span class="vh">Tiempo total: </span>35 min</li>
+      <li><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><rect x="2" y="9" width="3" height="5" rx="1" fill="currentColor"/><rect x="6.5" y="6" width="3" height="8" rx="1" fill="currentColor"/><rect x="11" y="3" width="3" height="11" rx="1" fill="currentColor"/></svg><span class="vh">Dificultad: </span>Fácil</li>
+      <li><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="5" r="2.8" fill="currentColor"/><path d="M2.5 14 a5.5 5 0 0 1 11 0 z" fill="currentColor"/></svg><span class="vh">Rinde: </span>4 porciones</li>
+    </ul>
+  </div>
+</li>
+<li class="tarjeta" data-categoria="sopas-y-guisos" data-dificultad="Fácil" data-tiempo="45" data-buscar="sopa de calabaza sopas y guisos sopa crema de calabaza, suave y aterciopelada, con puerro y un toque de nuez moscada. 1000 g de calabaza (anco o cabutia) pelada 1 cebolla 1 puerro (la parte blanca) 1 papa mediana 1000 ml de caldo de verduras 2 cucharadas de manteca o aceite 100 ml de crema de leche (opcional) sal, pimienta y nuez moscada a gusto semillas de calabaza tostadas para servir (opcional)">
+  <div class="ilustracion"><svg class="ilustra" viewBox="0 0 240 160" width="240" height="160" aria-hidden="true" focusable="false"><g fill="none" stroke="#b9a693" stroke-width="3" stroke-linecap="round" opacity=".75"><path d="M98 40 q-8 -8 0 -16 q8 -8 0 -16"/><path d="M122 36 q-8 -8 0 -16 q8 -8 0 -16"/><path d="M146 40 q-8 -8 0 -16 q8 -8 0 -16"/></g><ellipse cx="120" cy="146" rx="70" ry="9" fill="#5a3a1f" opacity=".14"/><path d="M35 70 Q40 142 120 144 Q200 142 205 70 Z" fill="#3f7f78"/><path d="M52 104 Q80 130 120 132" fill="none" stroke="#5b9a92" stroke-width="5" stroke-linecap="round" opacity=".7"/><ellipse cx="120" cy="70" rx="85" ry="26" fill="#3f7f78" stroke="#2c5d58" stroke-width="3"/><ellipse cx="120" cy="71" rx="76" ry="20" fill="#e8892b"/><ellipse cx="120" cy="71" rx="60" ry="13" fill="#f09a3c" opacity=".6"/><path d="M92 72 C100 60 140 60 144 70 C148 80 118 84 110 76 C104 70 120 66 128 70" fill="none" stroke="#fff5e6" stroke-width="4" stroke-linecap="round"/><g fill="#6f8f3a"><ellipse cx="150" cy="78" rx="4" ry="2" transform="rotate(20 150 78)"/><ellipse cx="160" cy="72" rx="4" ry="2" transform="rotate(-30 160 72)"/><ellipse cx="84" cy="66" rx="4" ry="2" transform="rotate(-10 84 66)"/><ellipse cx="76" cy="74" rx="4" ry="2" transform="rotate(30 76 74)"/></g></svg></div>
+  <div class="tarjeta-cuerpo">
+    <span class="etiqueta">Sopas y guisos</span>
+    <h3><a href="recetas/sopa-de-calabaza.html">Sopa de calabaza</a></h3>
+    <p>Sopa crema de calabaza, suave y aterciopelada, con puerro y un toque de nuez moscada.</p>
+    <ul class="meta">
+      <li><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M8 4.5 V8 L10.5 9.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span class="vh">Tiempo total: </span>45 min</li>
+      <li><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><rect x="2" y="9" width="3" height="5" rx="1" fill="currentColor"/><rect x="6.5" y="6" width="3" height="8" rx="1" fill="currentColor"/><rect x="11" y="3" width="3" height="11" rx="1" fill="currentColor"/></svg><span class="vh">Dificultad: </span>Fácil</li>
+      <li><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="5" r="2.8" fill="currentColor"/><path d="M2.5 14 a5.5 5 0 0 1 11 0 z" fill="currentColor"/></svg><span class="vh">Rinde: </span>4 porciones</li>
+    </ul>
+  </div>
+</li>
+<li class="tarjeta" data-categoria="platos-principales" data-dificultad="Fácil" data-tiempo="70" data-buscar="arroz con pollo platos principales arroz con pollo amarillo, cocido en una sola olla con verduras, caldo y arvejas. un clasico de todos los dias. 4 patas muslo de pollo 300 g de arroz largo fino 1 cebolla grande 1 morron rojo 2 dientes de ajo 200 g de tomate triturado 750 ml de caldo de pollo caliente 1 cucharadita de pimenton dulce 1 cucharadita de curcuma (o azafran) 150 g de arvejas congeladas o en lata 3 cucharadas de aceite sal y pimienta a gusto">
+  <div class="ilustracion"><svg class="ilustra" viewBox="0 0 240 160" width="240" height="160" aria-hidden="true" focusable="false"><ellipse cx="120" cy="105" rx="102" ry="48" fill="#5a3a1f" opacity=".13"/><ellipse cx="120" cy="96" rx="100" ry="50" fill="#fffaf2" stroke="#e1d1bb" stroke-width="3"/><ellipse cx="120" cy="96" rx="72" ry="34" fill="none" stroke="#efe3d1" stroke-width="2"/><path d="M56 96 C54 72 96 62 124 64 C164 66 188 84 182 102 C176 120 128 128 96 122 C70 118 58 110 56 96 Z" fill="#f0c64a" stroke="#d9a92a" stroke-width="2"/><g fill="#f8de8a"><ellipse cx="80" cy="90" rx="3" ry="1.4"/><ellipse cx="96" cy="80" rx="3" ry="1.4"/><ellipse cx="160" cy="92" rx="3" ry="1.4"/><ellipse cx="150" cy="110" rx="3" ry="1.4"/><ellipse cx="88" cy="110" rx="3" ry="1.4"/><ellipse cx="120" cy="116" rx="3" ry="1.4"/><ellipse cx="140" cy="74" rx="3" ry="1.4"/><ellipse cx="70" cy="100" rx="3" ry="1.4"/></g><g fill="#b9692e" stroke="#8f4c1c" stroke-width="2"><path d="M96 86 C96 74 124 72 128 84 C132 96 112 104 102 100 C98 98 96 92 96 86 Z"/><path d="M134 96 C140 86 164 88 164 100 C164 110 146 114 138 108 C134 105 132 100 134 96 Z"/></g><g fill="#d78a4a" opacity=".8"><ellipse cx="108" cy="82" rx="8" ry="3"/><ellipse cx="148" cy="94" rx="7" ry="2.6"/></g><g fill="#6aa84f" stroke="#4c8130" stroke-width="1"><circle cx="84" cy="98" r="4"/><circle cx="118" cy="106" r="4"/><circle cx="126" cy="70" r="4"/><circle cx="168" cy="86" r="4"/><circle cx="100" cy="112" r="4"/><circle cx="74" cy="86" r="4"/></g><g fill="#d0402c"><rect x="140" y="74" width="16" height="4" rx="2" transform="rotate(-20 148 76)"/><rect x="86" y="112" width="16" height="4" rx="2" transform="rotate(15 94 114)"/><rect x="150" y="112" width="14" height="4" rx="2" transform="rotate(-10 157 114)"/></g></svg></div>
+  <div class="tarjeta-cuerpo">
+    <span class="etiqueta">Platos principales</span>
+    <h3><a href="recetas/arroz-con-pollo.html">Arroz con pollo</a></h3>
+    <p>Arroz con pollo amarillo, cocido en una sola olla con verduras, caldo y arvejas. Un clásico de todos los días.</p>
+    <ul class="meta">
+      <li><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M8 4.5 V8 L10.5 9.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span class="vh">Tiempo total: </span>1 h 10 min</li>
+      <li><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><rect x="2" y="9" width="3" height="5" rx="1" fill="currentColor"/><rect x="6.5" y="6" width="3" height="8" rx="1" fill="currentColor"/><rect x="11" y="3" width="3" height="11" rx="1" fill="currentColor"/></svg><span class="vh">Dificultad: </span>Fácil</li>
+      <li><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="5" r="2.8" fill="currentColor"/><path d="M2.5 14 a5.5 5 0 0 1 11 0 z" fill="currentColor"/></svg><span class="vh">Rinde: </span>4 porciones</li>
+    </ul>
+  </div>
+</li>
+<li class="tarjeta" data-categoria="postres" data-dificultad="Media" data-tiempo="330" data-buscar="flan casero postres flan de huevo cremoso con caramelo, cocinado a bano maria. para servir con dulce de leche o crema. 1000 ml de leche entera 8 huevos 200 g de azucar 1 cucharadita de esencia de vainilla 150 g de azucar 3 cucharadas de agua dulce de leche o crema batida, a gusto">
+  <div class="ilustracion"><svg class="ilustra" viewBox="0 0 240 160" width="240" height="160" aria-hidden="true" focusable="false"><ellipse cx="120" cy="105" rx="102" ry="48" fill="#5a3a1f" opacity=".13"/><ellipse cx="120" cy="96" rx="100" ry="50" fill="#fffaf2" stroke="#e1d1bb" stroke-width="3"/><ellipse cx="120" cy="96" rx="72" ry="34" fill="none" stroke="#efe3d1" stroke-width="2"/><ellipse cx="120" cy="110" rx="58" ry="13" fill="#9b5520" opacity=".9"/><path d="M78 110 L92 58 Q120 50 148 58 L162 110 Q120 122 78 110 Z" fill="#f2c461" stroke="#d9a43a" stroke-width="2"/><path d="M84 90 Q86 74 92 62" fill="none" stroke="#f8dc93" stroke-width="5" stroke-linecap="round"/><ellipse cx="120" cy="58" rx="28" ry="7" fill="#8a4a1a"/><path d="M93 59 Q95 72 98 64 Q101 78 105 63 Q110 70 114 64 Q120 82 126 64 Q131 72 135 63 Q139 76 142 63 Q145 70 147 59 Z" fill="#8a4a1a"/><path d="M176 108 C168 106 168 96 178 94 C186 90 196 96 192 104 C190 110 182 110 176 108 Z" fill="#a8662d" stroke="#874f20" stroke-width="1.5"/></svg></div>
+  <div class="tarjeta-cuerpo">
+    <span class="etiqueta">Postres</span>
+    <h3><a href="recetas/flan-casero.html">Flan casero</a></h3>
+    <p>Flan de huevo cremoso con caramelo, cocinado a baño María. Para servir con dulce de leche o crema.</p>
+    <ul class="meta">
+      <li><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M8 4.5 V8 L10.5 9.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span class="vh">Tiempo total: </span>5 h 30 min</li>
+      <li><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><rect x="2" y="9" width="3" height="5" rx="1" fill="currentColor"/><rect x="6.5" y="6" width="3" height="8" rx="1" fill="currentColor"/><rect x="11" y="3" width="3" height="11" rx="1" fill="currentColor"/></svg><span class="vh">Dificultad: </span>Media</li>
+      <li><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="5" r="2.8" fill="currentColor"/><path d="M2.5 14 a5.5 5 0 0 1 11 0 z" fill="currentColor"/></svg><span class="vh">Rinde: </span>8 porciones</li>
+    </ul>
+  </div>
+</li>
+<li class="tarjeta" data-categoria="postres" data-dificultad="Fácil" data-tiempo="50" data-buscar="brownies postres brownies de chocolate con costrita brillante arriba y centro denso y humedo. con o sin nueces. 200 g de chocolate semiamargo 150 g de manteca 250 g de azucar 3 huevos 1 cucharadita de esencia de vainilla 100 g de harina 0000 30 g de cacao amargo una pizca de sal 100 g de nueces picadas (opcional)">
+  <div class="ilustracion"><svg class="ilustra" viewBox="0 0 240 160" width="240" height="160" aria-hidden="true" focusable="false"><ellipse cx="120" cy="105" rx="102" ry="48" fill="#5a3a1f" opacity=".13"/><ellipse cx="120" cy="96" rx="100" ry="50" fill="#fffaf2" stroke="#e1d1bb" stroke-width="3"/><ellipse cx="120" cy="96" rx="72" ry="34" fill="none" stroke="#efe3d1" stroke-width="2"/><g stroke="#3e2216" stroke-width="2"><rect x="62" y="82" width="50" height="34" rx="4" fill="#5a3321"/><rect x="122" y="86" width="50" height="34" rx="4" fill="#5a3321"/><rect x="92" y="54" width="50" height="34" rx="4" fill="#5a3321"/></g><g fill="#7a4732"><rect x="64" y="84" width="46" height="8" rx="3"/><rect x="124" y="88" width="46" height="8" rx="3"/><rect x="94" y="56" width="46" height="8" rx="3"/></g><g fill="none" stroke="#9a6247" stroke-width="1.2" stroke-linecap="round"><path d="M70 88 l8 2 l6 -2"/><path d="M132 92 l7 1 l8 -2"/><path d="M100 60 l9 2 l7 -2 l6 1"/></g><g fill="#c99a5b"><ellipse cx="80" cy="104" rx="4" ry="2.5"/><ellipse cx="146" cy="108" rx="4" ry="2.5"/><ellipse cx="114" cy="76" rx="4" ry="2.5"/><ellipse cx="96" cy="100" rx="3" ry="2"/><ellipse cx="128" cy="72" rx="3" ry="2"/></g></svg></div>
+  <div class="tarjeta-cuerpo">
+    <span class="etiqueta">Postres</span>
+    <h3><a href="recetas/brownies.html">Brownies</a></h3>
+    <p>Brownies de chocolate con costrita brillante arriba y centro denso y húmedo. Con o sin nueces.</p>
+    <ul class="meta">
+      <li><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M8 4.5 V8 L10.5 9.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span class="vh">Tiempo total: </span>50 min</li>
+      <li><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><rect x="2" y="9" width="3" height="5" rx="1" fill="currentColor"/><rect x="6.5" y="6" width="3" height="8" rx="1" fill="currentColor"/><rect x="11" y="3" width="3" height="11" rx="1" fill="currentColor"/></svg><span class="vh">Dificultad: </span>Fácil</li>
+      <li><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="5" r="2.8" fill="currentColor"/><path d="M2.5 14 a5.5 5 0 0 1 11 0 z" fill="currentColor"/></svg><span class="vh">Rinde: </span>16 cuadraditos</li>
+    </ul>
+  </div>
+</li>
+<li class="tarjeta" data-categoria="postres" data-dificultad="Media" data-tiempo="90" data-buscar="alfajores de maicena postres alfajores de maicena que se deshacen en la boca, rellenos con dulce de leche y con el borde pasado por coco. 200 g de manteca a temperatura ambiente 150 g de azucar 3 yemas 300 g de almidon de maiz (maicena) 200 g de harina 0000 2 cucharaditas de polvo de hornear 1 cucharadita de esencia de vainilla 1 cucharada de conac (opcional) 1 limon, solo la ralladura 400 g de dulce de leche repostero 50 g de coco rallado">
+  <div class="ilustracion"><svg class="ilustra" viewBox="0 0 240 160" width="240" height="160" aria-hidden="true" focusable="false"><ellipse cx="120" cy="105" rx="102" ry="48" fill="#5a3a1f" opacity=".13"/><ellipse cx="120" cy="96" rx="100" ry="50" fill="#fffaf2" stroke="#e1d1bb" stroke-width="3"/><ellipse cx="120" cy="96" rx="72" ry="34" fill="none" stroke="#efe3d1" stroke-width="2"/><g><rect x="56" y="98" width="76" height="15" rx="7" fill="#f5e3bd" stroke="#d8bd8b" stroke-width="2"/><rect x="58" y="89" width="72" height="11" rx="5" fill="#a5652a"/><rect x="56" y="76" width="76" height="15" rx="7" fill="#f5e3bd" stroke="#d8bd8b" stroke-width="2"/><g fill="#ffffff"><circle cx="62" cy="94" r="1.8"/><circle cx="70" cy="96" r="1.8"/><circle cx="78" cy="93" r="1.8"/><circle cx="86" cy="96" r="1.8"/><circle cx="94" cy="94" r="1.8"/><circle cx="102" cy="96" r="1.8"/><circle cx="110" cy="93" r="1.8"/><circle cx="118" cy="96" r="1.8"/><circle cx="126" cy="94" r="1.8"/></g></g><circle cx="168" cy="96" r="27" fill="#a5652a"/><circle cx="168" cy="94" r="25" fill="#f7e8c6" stroke="#d8bd8b" stroke-width="2"/><g fill="#fffdf6"><circle cx="160" cy="86" r="2"/><circle cx="172" cy="90" r="1.6"/><circle cx="164" cy="100" r="1.8"/><circle cx="178" cy="100" r="1.5"/><circle cx="170" cy="80" r="1.5"/></g></svg></div>
+  <div class="tarjeta-cuerpo">
+    <span class="etiqueta">Postres</span>
+    <h3><a href="recetas/alfajores-de-maicena.html">Alfajores de maicena</a></h3>
+    <p>Alfajores de maicena que se deshacen en la boca, rellenos con dulce de leche y con el borde pasado por coco.</p>
+    <ul class="meta">
+      <li><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M8 4.5 V8 L10.5 9.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span class="vh">Tiempo total: </span>1 h 30 min</li>
+      <li><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><rect x="2" y="9" width="3" height="5" rx="1" fill="currentColor"/><rect x="6.5" y="6" width="3" height="8" rx="1" fill="currentColor"/><rect x="11" y="3" width="3" height="11" rx="1" fill="currentColor"/></svg><span class="vh">Dificultad: </span>Media</li>
+      <li><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="5" r="2.8" fill="currentColor"/><path d="M2.5 14 a5.5 5 0 0 1 11 0 z" fill="currentColor"/></svg><span class="vh">Rinde: </span>20 alfajores</li>
+    </ul>
+  </div>
+</li>
+<li class="tarjeta" data-categoria="postres" data-dificultad="Fácil" data-tiempo="45" data-buscar="panqueques postres panqueques finitos y tiernos para rellenar con dulce de leche, o con relleno salado si preferis. 150 g de harina 0000 2 huevos 350 ml de leche 20 g de manteca derretida, y un poco mas para la sarten una pizca de sal dulce de leche para rellenar, a gusto">
+  <div class="ilustracion"><svg class="ilustra" viewBox="0 0 240 160" width="240" height="160" aria-hidden="true" focusable="false"><ellipse cx="120" cy="105" rx="102" ry="48" fill="#5a3a1f" opacity=".13"/><ellipse cx="120" cy="96" rx="100" ry="50" fill="#fffaf2" stroke="#e1d1bb" stroke-width="3"/><ellipse cx="120" cy="96" rx="72" ry="34" fill="none" stroke="#efe3d1" stroke-width="2"/><g stroke="#c9923e" stroke-width="2"><ellipse cx="104" cy="108" rx="54" ry="18" fill="#e3ad5a"/><ellipse cx="104" cy="102" rx="54" ry="18" fill="#e8b766"/><ellipse cx="104" cy="96" rx="54" ry="18" fill="#ebbd70"/><ellipse cx="104" cy="90" rx="54" ry="18" fill="#efc57c"/></g><path d="M80 88 C82 78 126 76 130 88 C132 96 126 96 124 102 C122 108 118 96 112 98 C104 100 100 106 96 98 C92 92 80 96 80 88 Z" fill="#9a5a26"/><g transform="rotate(-12 178 100)"><rect x="152" y="92" width="50" height="20" rx="10" fill="#e3ad5a" stroke="#c9923e" stroke-width="2"/><ellipse cx="202" cy="102" rx="6" ry="10" fill="#efc57c" stroke="#c9923e" stroke-width="2"/><ellipse cx="202" cy="102" rx="2.5" ry="5" fill="#9a5a26"/></g></svg></div>
+  <div class="tarjeta-cuerpo">
+    <span class="etiqueta">Postres</span>
+    <h3><a href="recetas/panqueques.html">Panqueques</a></h3>
+    <p>Panqueques finitos y tiernos para rellenar con dulce de leche, o con relleno salado si preferís.</p>
+    <ul class="meta">
+      <li><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M8 4.5 V8 L10.5 9.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span class="vh">Tiempo total: </span>45 min</li>
+      <li><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><rect x="2" y="9" width="3" height="5" rx="1" fill="currentColor"/><rect x="6.5" y="6" width="3" height="8" rx="1" fill="currentColor"/><rect x="11" y="3" width="3" height="11" rx="1" fill="currentColor"/></svg><span class="vh">Dificultad: </span>Fácil</li>
+      <li><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="5" r="2.8" fill="currentColor"/><path d="M2.5 14 a5.5 5 0 0 1 11 0 z" fill="currentColor"/></svg><span class="vh">Rinde: </span>12 panqueques</li>
+    </ul>
+  </div>
+</li>
+<li class="tarjeta" data-categoria="panaderia" data-dificultad="Fácil" data-tiempo="40" data-buscar="chipa panaderia chipa casero de almidon de mandioca y queso, crocante por fuera y elastico por dentro. sin harina de trigo. 500 g de almidon de mandioca (fecula de mandioca) 250 g de queso semiduro rallado (tipo sardo) 150 g de queso cremoso o queso fresco desmenuzado 100 g de manteca a temperatura ambiente 2 huevos 150 ml de leche, aproximadamente 1 cucharadita de sal">
+  <div class="ilustracion"><svg class="ilustra" viewBox="0 0 240 160" width="240" height="160" aria-hidden="true" focusable="false"><ellipse cx="120" cy="105" rx="102" ry="48" fill="#5a3a1f" opacity=".13"/><ellipse cx="120" cy="96" rx="100" ry="50" fill="#fffaf2" stroke="#e1d1bb" stroke-width="3"/><ellipse cx="120" cy="96" rx="72" ry="34" fill="none" stroke="#efe3d1" stroke-width="2"/><g transform="translate(82 104)"><circle r="16" fill="#e8bf68" stroke="#c99a3e" stroke-width="2"/><ellipse cx="-5" cy="-6" rx="7" ry="4" fill="#f6dc9c"/><path d="M2 4 q4 -2 7 1" fill="none" stroke="#c99a3e" stroke-width="1.5" stroke-linecap="round"/></g><g transform="translate(116 110)"><circle r="16" fill="#e8bf68" stroke="#c99a3e" stroke-width="2"/><ellipse cx="-5" cy="-6" rx="7" ry="4" fill="#f6dc9c"/><path d="M2 4 q4 -2 7 1" fill="none" stroke="#c99a3e" stroke-width="1.5" stroke-linecap="round"/></g><g transform="translate(150 106)"><circle r="16" fill="#e8bf68" stroke="#c99a3e" stroke-width="2"/><ellipse cx="-5" cy="-6" rx="7" ry="4" fill="#f6dc9c"/><path d="M2 4 q4 -2 7 1" fill="none" stroke="#c99a3e" stroke-width="1.5" stroke-linecap="round"/></g><g transform="translate(98 82)"><circle r="16" fill="#e8bf68" stroke="#c99a3e" stroke-width="2"/><ellipse cx="-5" cy="-6" rx="7" ry="4" fill="#f6dc9c"/><path d="M2 4 q4 -2 7 1" fill="none" stroke="#c99a3e" stroke-width="1.5" stroke-linecap="round"/></g><g transform="translate(134 84)"><circle r="16" fill="#e8bf68" stroke="#c99a3e" stroke-width="2"/><ellipse cx="-5" cy="-6" rx="7" ry="4" fill="#f6dc9c"/><path d="M2 4 q4 -2 7 1" fill="none" stroke="#c99a3e" stroke-width="1.5" stroke-linecap="round"/></g><g transform="translate(168 86) scale(.9)"><circle r="16" fill="#e8bf68" stroke="#c99a3e" stroke-width="2"/><ellipse cx="-5" cy="-6" rx="7" ry="4" fill="#f6dc9c"/><path d="M2 4 q4 -2 7 1" fill="none" stroke="#c99a3e" stroke-width="1.5" stroke-linecap="round"/></g><g transform="translate(116 62) scale(.95)"><circle r="16" fill="#e8bf68" stroke="#c99a3e" stroke-width="2"/><ellipse cx="-5" cy="-6" rx="7" ry="4" fill="#f6dc9c"/><path d="M2 4 q4 -2 7 1" fill="none" stroke="#c99a3e" stroke-width="1.5" stroke-linecap="round"/></g></svg></div>
+  <div class="tarjeta-cuerpo">
+    <span class="etiqueta">Panadería</span>
+    <h3><a href="recetas/chipa.html">Chipá</a></h3>
+    <p>Chipá casero de almidón de mandioca y queso, crocante por fuera y elástico por dentro. Sin harina de trigo.</p>
+    <ul class="meta">
+      <li><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M8 4.5 V8 L10.5 9.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span class="vh">Tiempo total: </span>40 min</li>
+      <li><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><rect x="2" y="9" width="3" height="5" rx="1" fill="currentColor"/><rect x="6.5" y="6" width="3" height="8" rx="1" fill="currentColor"/><rect x="11" y="3" width="3" height="11" rx="1" fill="currentColor"/></svg><span class="vh">Dificultad: </span>Fácil</li>
+      <li><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="5" r="2.8" fill="currentColor"/><path d="M2.5 14 a5.5 5 0 0 1 11 0 z" fill="currentColor"/></svg><span class="vh">Rinde: </span>30 chipá</li>
+    </ul>
+  </div>
+</li>
+<li class="tarjeta" data-categoria="bebidas" data-dificultad="Fácil" data-tiempo="5" data-buscar="licuado de banana bebidas licuado de banana con leche bien fria, espumoso y listo en cinco minutos. ideal para el desayuno o la merienda. 2 bananas maduras 400 ml de leche bien fria 2 cucharaditas de azucar o miel (opcional) ½ cucharadita de esencia de vainilla (opcional) 4 cubitos de hielo canela a gusto">
+  <div class="ilustracion"><svg class="ilustra" viewBox="0 0 240 160" width="240" height="160" aria-hidden="true" focusable="false"><ellipse cx="120" cy="146" rx="44" ry="7" fill="#5a3a1f" opacity=".14"/><rect x="122" y="6" width="7" height="60" rx="3" fill="#d0402c" transform="rotate(14 125 36)"/><path d="M90 32 L150 32 L142 140 Q120 146 98 140 Z" fill="#fbeec0"/><ellipse cx="120" cy="34" rx="30" ry="6" fill="#fffaf0"/><g fill="#fffaf0"><circle cx="100" cy="36" r="5"/><circle cx="112" cy="31" r="6"/><circle cx="128" cy="32" r="6"/><circle cx="141" cy="36" r="5"/></g><path d="M90 30 L150 30 L142 140 Q120 146 98 140 Z" fill="none" stroke="#b39f8a" stroke-width="3" stroke-linejoin="round"/><path d="M100 50 L106 128" stroke="#ffffff" stroke-width="4" stroke-linecap="round" opacity=".6"/><circle cx="150" cy="32" r="11" fill="#f7e7a6" stroke="#d6b84a" stroke-width="2"/><circle cx="150" cy="32" r="4" fill="#e9d27e"/><path d="M156 128 Q194 118 208 80 Q212 74 214 80 Q206 116 160 136 Z" fill="#f2d24a" stroke="#c9a51f" stroke-width="2" stroke-linejoin="round"/><path d="M210 78 l3 -6" stroke="#6b5222" stroke-width="3" stroke-linecap="round"/></svg></div>
+  <div class="tarjeta-cuerpo">
+    <span class="etiqueta">Bebidas</span>
+    <h3><a href="recetas/licuado-de-banana.html">Licuado de banana</a></h3>
+    <p>Licuado de banana con leche bien fría, espumoso y listo en cinco minutos. Ideal para el desayuno o la merienda.</p>
+    <ul class="meta">
+      <li><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M8 4.5 V8 L10.5 9.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span class="vh">Tiempo total: </span>5 min</li>
+      <li><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><rect x="2" y="9" width="3" height="5" rx="1" fill="currentColor"/><rect x="6.5" y="6" width="3" height="8" rx="1" fill="currentColor"/><rect x="11" y="3" width="3" height="11" rx="1" fill="currentColor"/></svg><span class="vh">Dificultad: </span>Fácil</li>
+      <li><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="5" r="2.8" fill="currentColor"/><path d="M2.5 14 a5.5 5 0 0 1 11 0 z" fill="currentColor"/></svg><span class="vh">Rinde: </span>2 vasos</li>
+    </ul>
+  </div>
+</li>
+  </ul>
+</section>
+</div>
+</main>
+<footer class="pie">
+  <div class="contenedor">
+    <nav aria-label="Categorías del recetario">
+      <ul><li><a href="categorias/platos-principales.html">Platos principales</a></li><li><a href="categorias/pastas.html">Pastas</a></li><li><a href="categorias/sopas-y-guisos.html">Sopas y guisos</a></li><li><a href="categorias/ensaladas.html">Ensaladas</a></li><li><a href="categorias/postres.html">Postres</a></li><li><a href="categorias/panaderia.html">Panadería</a></li><li><a href="categorias/bebidas.html">Bebidas</a></li></ul>
+    </nav>
+    <p>La Olla · Recetario casero. Recetas probadas, explicadas sin vueltas y pensadas para cocinar en casa.</p>
+  </div>
+</footer>
+</body>
+</html>

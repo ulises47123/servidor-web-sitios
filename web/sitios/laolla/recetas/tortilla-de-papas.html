@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tortilla de papas – La Olla</title>
+<meta name="description" content="Receta de tortilla de papas con cebolla, jugosa y bien dorada. Cómo cortar y confitar las papas, cuánto batir los huevos y cómo darla vuelta con un plato.">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#fbf6ef" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#1b1611" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../css/estilos.css">
+<script src="../js/receta.js" defer></script>
+</head>
+<body>
+<a class="saltar" href="#contenido">Saltar al contenido</a>
+<header class="cabecera">
+  <div class="contenedor">
+    <a class="marca" href="../index.html"><svg viewBox="0 0 32 32" width="32" height="32" aria-hidden="true" focusable="false"><path d="M11 7 q-2 -2 0 -4 M16 7 q-2 -2 0 -4 M21 7 q-2 -2 0 -4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" opacity=".7"/><rect x="3" y="11" width="26" height="3" rx="1.5" fill="currentColor"/><path d="M5 15 h22 v6 a7 7 0 0 1 -7 7 h-8 a7 7 0 0 1 -7 -7 z" fill="currentColor"/><rect x="1" y="16" width="4" height="3" rx="1.5" fill="currentColor"/><rect x="27" y="16" width="4" height="3" rx="1.5" fill="currentColor"/><rect x="14" y="8" width="4" height="3" rx="1.5" fill="currentColor"/></svg><span>La Olla</span></a>
+    <nav class="nav-principal" aria-label="Principal">
+      <ul><li><a href="../index.html">Inicio</a></li><li><a href="../index.html#recetas">Recetas</a></li><li><a href="../categorias/index.html">Categorías</a></li></ul>
+    </nav>
+  </div>
+</header>
+<main id="contenido" tabindex="-1">
+<div class="contenedor">
+<nav class="migas" aria-label="Ruta de navegación"><ol><li><a href="../index.html">Inicio</a></li><li><a href="../categorias/platos-principales.html">Platos principales</a></li><li><span aria-current="page">Tortilla de papas</span></li></ol></nav>
+<article class="receta">
+  <header class="receta-cabecera">
+    <div>
+      <h1>Tortilla de papas</h1>
+      <p class="descripcion">Tortilla de papas con cebolla, jugosa por dentro y dorada por fuera, con el truco para darla vuelta sin miedo.</p>
+      <dl class="datos">
+        <div><dt>Tiempo total</dt><dd><time datetime="PT50M">50 min</time></dd></div>
+        <div><dt>Rinde</dt><dd>4 porciones</dd></div>
+        <div><dt>Dificultad</dt><dd>Media</dd></div>
+        <div><dt>Categoría</dt><dd><a href="../categorias/platos-principales.html">Platos principales</a></dd></div>
+      </dl>
+      
+      <div class="acciones">
+        <button type="button" class="boton" id="btn-modo-cocina" hidden><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><rect x="2" y="2" width="12" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M6 5.5 L10.5 8 L6 10.5 Z" fill="currentColor"/></svg>Modo cocina</button>
+        <button type="button" class="boton boton-sec" id="btn-imprimir" hidden><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 6 V2 h8 v4" fill="none" stroke="currentColor" stroke-width="1.6"/><rect x="1.5" y="6" width="13" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.6"/><rect x="4.5" y="9.5" width="7" height="5" fill="currentColor"/></svg>Imprimir</button>
+      </div>
+    </div>
+    <div class="ilustracion-grande"><svg class="ilustra" viewBox="0 0 240 160" width="240" height="160" aria-hidden="true" focusable="false"><ellipse cx="120" cy="105" rx="102" ry="48" fill="#5a3a1f" opacity=".13"/><ellipse cx="120" cy="96" rx="100" ry="50" fill="#fffaf2" stroke="#e1d1bb" stroke-width="3"/><ellipse cx="120" cy="96" rx="72" ry="34" fill="none" stroke="#efe3d1" stroke-width="2"/><ellipse cx="120" cy="99" rx="66" ry="32" fill="#c98d2c"/><ellipse cx="120" cy="93" rx="66" ry="32" fill="#e9b84f" stroke="#c58f2b" stroke-width="3"/><g fill="#d39b35" opacity=".8"><ellipse cx="96" cy="84" rx="8" ry="4"/><ellipse cx="140" cy="102" rx="10" ry="4"/><ellipse cx="150" cy="80" rx="6" ry="3"/><ellipse cx="94" cy="106" rx="6" ry="3"/></g><path d="M120 93 L186 93 M120 93 L146 123" stroke="#b37d22" stroke-width="2.5" stroke-linecap="round"/><g fill="#4f8a3a"><circle cx="112" cy="90" r="2"/><circle cx="126" cy="98" r="2"/><circle cx="104" cy="98" r="1.6"/></g></svg></div>
+  </header>
+
+  <div class="receta-cuerpo">
+    <section class="panel-ingredientes" aria-labelledby="titulo-ingredientes">
+      <h2 id="titulo-ingredientes">Ingredientes</h2>
+      <div class="calculadora" data-porciones-base="4">
+        <span class="calc-etiqueta">Cantidades para</span>
+        <button type="button" class="calc-btn" data-paso="-1" aria-label="Menos porciones" hidden>−</button>
+        <output aria-live="polite"><span class="porciones-num">4</span> <span class="pl" data-s="porción" data-p="porciones">porciones</span></output>
+        <button type="button" class="calc-btn" data-paso="1" aria-label="Más porciones" hidden>+</button>
+        <button type="button" class="boton-texto calc-reset" hidden>Volver a 4 porciones</button>
+      </div>
+      <p class="calc-nota" hidden>Los ingredientes «a gusto» no se recalculan. Si cambiás mucho las cantidades, revisá el tamaño del molde o de la olla y los tiempos de cocción.</p>
+<ul class="ingredientes">
+<li><label><input type="checkbox" id="ing-1"><span><span class="cant" data-base="1000" data-tipo="m">1000</span> g de papas</span></label></li>
+<li><label><input type="checkbox" id="ing-2"><span><span class="cant" data-base="1" data-tipo="u">1</span> <span class="pl" data-s="cebolla grande" data-p="cebollas grandes">cebolla grande</span></span></label></li>
+<li><label><input type="checkbox" id="ing-3"><span><span class="cant" data-base="6" data-tipo="u">6</span> <span class="pl" data-s="huevo" data-p="huevos">huevos</span></span></label></li>
+<li><label><input type="checkbox" id="ing-4"><span>Aceite abundante para cocinar las papas</span></label></li>
+<li><label><input type="checkbox" id="ing-5"><span>Sal a gusto</span></label></li>
+</ul>
+    </section>
+
+    <div class="receta-preparacion">
+      <section aria-labelledby="titulo-pasos">
+        <h2 id="titulo-pasos">Preparación</h2>
+        <ol class="pasos">
+<li>Pelá las papas y cortalas en láminas finas o en cubitos pequeños. Cortá la cebolla en pluma.</li>
+<li>Calentá abundante aceite en una sartén a fuego medio-bajo. Cociná las papas y la cebolla, moviéndolas de vez en cuando, de 20 a 25 minutos, hasta que estén tiernas y apenas doradas.</li>
+<li>Escurrilas muy bien en un colador y reservá el aceite para otras preparaciones.</li>
+<li>En un bol grande batí los huevos con sal, sin hacer espuma. Agregá las papas y la cebolla todavía calientes, mezclá y dejá reposar 5 minutos.</li>
+<li>Calentá una sartén antiadherente de unos 24 cm con una cucharada de aceite. Volcá la mezcla y cociná a fuego medio de 4 a 5 minutos, moviendo la sartén para que no se pegue.</li>
+<li>Tapá la sartén con un plato más grande, dala vuelta de un movimiento firme y deslizá la tortilla otra vez en la sartén.</li>
+<li>Cociná del otro lado 3 a 4 minutos para que quede jugosa, o unos minutos más si la preferís cocida. Serví tibia o a temperatura ambiente.</li>
+        </ol>
+      </section>
+      <section class="consejos" aria-labelledby="titulo-consejos">
+        <h2 id="titulo-consejos">Consejos</h2>
+        <ul>
+<li>Si duplicás la receta, usá dos sartenes en vez de una más grande: así se cocina pareja.</li>
+<li>El reposo de las papas en el huevo es clave para que la tortilla quede compacta y jugosa.</li>
+<li>Podés sumar chorizo colorado, morrón asado o espinaca salteada a la mezcla.</li>
+        </ul>
+      </section>
+    </div>
+  </div>
+</article>
+
+<section class="relacionadas" aria-labelledby="titulo-relacionadas">
+  <h2 id="titulo-relacionadas">También te puede gustar</h2>
+  <ul class="grilla">
+<li class="tarjeta" data-categoria="platos-principales" data-dificultad="Media" data-tiempo="120" data-buscar="empanadas de carne platos principales empanadas de horno con relleno de carne picada, cebolla, huevo duro y aceitunas, condimentadas con comino y pimenton. 500 g de carne picada comun o especial 2 cebollas medianas 1 morron rojo 3 cebollas de verdeo 2 cucharadas de aceite 1 cucharadita de comino 1 cucharadita de pimenton dulce ½ cucharadita de aji molido sal y pimienta a gusto 2 huevos duros 12 aceitunas verdes (opcional) 12 tapas para empanadas de horno 1 huevo para pintar">
+  <div class="ilustracion"><svg class="ilustra" viewBox="0 0 240 160" width="240" height="160" aria-hidden="true" focusable="false"><ellipse cx="120" cy="105" rx="102" ry="48" fill="#5a3a1f" opacity=".13"/><ellipse cx="120" cy="96" rx="100" ry="50" fill="#fffaf2" stroke="#e1d1bb" stroke-width="3"/><ellipse cx="120" cy="96" rx="72" ry="34" fill="none" stroke="#efe3d1" stroke-width="2"/><g transform="translate(82 98) rotate(-10)"><path d="M-38 10 A38 30 0 0 1 38 10 Q0 18 -38 10 Z" fill="#e3a65a" stroke="#b9773a" stroke-width="2"/><path d="M-34 7 A34 26 0 0 1 34 7" fill="none" stroke="#c4843f" stroke-width="5" stroke-dasharray="3 5" stroke-linecap="round"/><ellipse cx="-6" cy="-5" rx="11" ry="4" fill="#f3c98a" opacity=".75"/></g><g transform="translate(158 94) rotate(12)"><path d="M-38 10 A38 30 0 0 1 38 10 Q0 18 -38 10 Z" fill="#e3a65a" stroke="#b9773a" stroke-width="2"/><path d="M-34 7 A34 26 0 0 1 34 7" fill="none" stroke="#c4843f" stroke-width="5" stroke-dasharray="3 5" stroke-linecap="round"/><ellipse cx="-6" cy="-5" rx="11" ry="4" fill="#f3c98a" opacity=".75"/></g><g transform="translate(120 118)"><path d="M-38 10 A38 30 0 0 1 38 10 Q0 18 -38 10 Z" fill="#e3a65a" stroke="#b9773a" stroke-width="2"/><path d="M-34 7 A34 26 0 0 1 34 7" fill="none" stroke="#c4843f" stroke-width="5" stroke-dasharray="3 5" stroke-linecap="round"/><ellipse cx="-6" cy="-5" rx="11" ry="4" fill="#f3c98a" opacity=".75"/></g><circle cx="186" cy="120" r="5" fill="#5b7a2e"/><circle cx="196" cy="114" r="4" fill="#6f9138"/></svg></div>
+  <div class="tarjeta-cuerpo">
+    <span class="etiqueta">Platos principales</span>
+    <h3><a href="../recetas/empanadas-de-carne.html">Empanadas de carne</a></h3>
+    <p>Empanadas de horno con relleno de carne picada, cebolla, huevo duro y aceitunas, condimentadas con comino y pimentón.</p>
+    <ul class="meta">
+      <li><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M8 4.5 V8 L10.5 9.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span class="vh">Tiempo total: </span>2 h</li>
+      <li><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><rect x="2" y="9" width="3" height="5" rx="1" fill="currentColor"/><rect x="6.5" y="6" width="3" height="8" rx="1" fill="currentColor"/><rect x="11" y="3" width="3" height="11" rx="1" fill="currentColor"/></svg><span class="vh">Dificultad: </span>Media</li>
+      <li><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="5" r="2.8" fill="currentColor"/><path d="M2.5 14 a5.5 5 0 0 1 11 0 z" fill="currentColor"/></svg><span class="vh">Rinde: </span>12 empanadas</li>
+    </ul>
+  </div>
+</li>
+<li class="tarjeta" data-categoria="platos-principales" data-dificultad="Fácil" data-tiempo="40" data-buscar="milanesas platos principales milanesas de carne bien finitas, con rebozado de huevo, ajo y perejil y pan rallado crocante. fritas o al horno. 800 g de nalga o peceto cortado en bifes finos 3 huevos 2 dientes de ajo 2 cucharadas de perejil picado 300 g de pan rallado sal y pimienta a gusto aceite para freir, o rocio vegetal si las haces al horno limon para servir, a gusto">
+  <div class="ilustracion"><svg class="ilustra" viewBox="0 0 240 160" width="240" height="160" aria-hidden="true" focusable="false"><ellipse cx="120" cy="105" rx="102" ry="48" fill="#5a3a1f" opacity=".13"/><ellipse cx="120" cy="96" rx="100" ry="50" fill="#fffaf2" stroke="#e1d1bb" stroke-width="3"/><ellipse cx="120" cy="96" rx="72" ry="34" fill="none" stroke="#efe3d1" stroke-width="2"/><path d="M58 92 C58 64 108 58 138 64 C174 70 186 92 172 110 C158 128 100 128 78 120 C62 114 58 104 58 92 Z" fill="#c9893f" stroke="#a66a2a" stroke-width="2"/><path d="M72 92 C74 76 106 70 132 74" fill="none" stroke="#dca35c" stroke-width="5" stroke-linecap="round" opacity=".8"/><g fill="#a5692b"><circle cx="90" cy="100" r="1.8"/><circle cx="110" cy="90" r="1.8"/><circle cx="130" cy="104" r="1.8"/><circle cx="150" cy="92" r="1.8"/><circle cx="104" cy="112" r="1.8"/><circle cx="142" cy="114" r="1.8"/><circle cx="120" cy="80" r="1.8"/></g><path d="M162 120 A22 22 0 0 0 206 120 Z" fill="#f5d33f" stroke="#d6ad1c" stroke-width="2"/><path d="M184 120 L172 132 M184 120 L184 140 M184 120 L196 132" stroke="#e6c22c" stroke-width="1.5"/><g fill="#4f8a3a"><circle cx="70" cy="122" r="4"/><circle cx="78" cy="127" r="3.5"/><circle cx="64" cy="128" r="3"/></g></svg></div>
+  <div class="tarjeta-cuerpo">
+    <span class="etiqueta">Platos principales</span>
+    <h3><a href="../recetas/milanesas.html">Milanesas</a></h3>
+    <p>Milanesas de carne bien finitas, con rebozado de huevo, ajo y perejil y pan rallado crocante. Fritas o al horno.</p>
+    <ul class="meta">
+      <li><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M8 4.5 V8 L10.5 9.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span class="vh">Tiempo total: </span>40 min</li>
+      <li><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><rect x="2" y="9" width="3" height="5" rx="1" fill="currentColor"/><rect x="6.5" y="6" width="3" height="8" rx="1" fill="currentColor"/><rect x="11" y="3" width="3" height="11" rx="1" fill="currentColor"/></svg><span class="vh">Dificultad: </span>Fácil</li>
+      <li><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="5" r="2.8" fill="currentColor"/><path d="M2.5 14 a5.5 5 0 0 1 11 0 z" fill="currentColor"/></svg><span class="vh">Rinde: </span>4 porciones</li>
+    </ul>
+  </div>
+</li>
+<li class="tarjeta" data-categoria="platos-principales" data-dificultad="Fácil" data-tiempo="70" data-buscar="arroz con pollo platos principales arroz con pollo amarillo, cocido en una sola olla con verduras, caldo y arvejas. un clasico de todos los dias. 4 patas muslo de pollo 300 g de arroz largo fino 1 cebolla grande 1 morron rojo 2 dientes de ajo 200 g de tomate triturado 750 ml de caldo de pollo caliente 1 cucharadita de pimenton dulce 1 cucharadita de curcuma (o azafran) 150 g de arvejas congeladas o en lata 3 cucharadas de aceite sal y pimienta a gusto">
+  <div class="ilustracion"><svg class="ilustra" viewBox="0 0 240 160" width="240" height="160" aria-hidden="true" focusable="false"><ellipse cx="120" cy="105" rx="102" ry="48" fill="#5a3a1f" opacity=".13"/><ellipse cx="120" cy="96" rx="100" ry="50" fill="#fffaf2" stroke="#e1d1bb" stroke-width="3"/><ellipse cx="120" cy="96" rx="72" ry="34" fill="none" stroke="#efe3d1" stroke-width="2"/><path d="M56 96 C54 72 96 62 124 64 C164 66 188 84 182 102 C176 120 128 128 96 122 C70 118 58 110 56 96 Z" fill="#f0c64a" stroke="#d9a92a" stroke-width="2"/><g fill="#f8de8a"><ellipse cx="80" cy="90" rx="3" ry="1.4"/><ellipse cx="96" cy="80" rx="3" ry="1.4"/><ellipse cx="160" cy="92" rx="3" ry="1.4"/><ellipse cx="150" cy="110" rx="3" ry="1.4"/><ellipse cx="88" cy="110" rx="3" ry="1.4"/><ellipse cx="120" cy="116" rx="3" ry="1.4"/><ellipse cx="140" cy="74" rx="3" ry="1.4"/><ellipse cx="70" cy="100" rx="3" ry="1.4"/></g><g fill="#b9692e" stroke="#8f4c1c" stroke-width="2"><path d="M96 86 C96 74 124 72 128 84 C132 96 112 104 102 100 C98 98 96 92 96 86 Z"/><path d="M134 96 C140 86 164 88 164 100 C164 110 146 114 138 108 C134 105 132 100 134 96 Z"/></g><g fill="#d78a4a" opacity=".8"><ellipse cx="108" cy="82" rx="8" ry="3"/><ellipse cx="148" cy="94" rx="7" ry="2.6"/></g><g fill="#6aa84f" stroke="#4c8130" stroke-width="1"><circle cx="84" cy="98" r="4"/><circle cx="118" cy="106" r="4"/><circle cx="126" cy="70" r="4"/><circle cx="168" cy="86" r="4"/><circle cx="100" cy="112" r="4"/><circle cx="74" cy="86" r="4"/></g><g fill="#d0402c"><rect x="140" y="74" width="16" height="4" rx="2" transform="rotate(-20 148 76)"/><rect x="86" y="112" width="16" height="4" rx="2" transform="rotate(15 94 114)"/><rect x="150" y="112" width="14" height="4" rx="2" transform="rotate(-10 157 114)"/></g></svg></div>
+  <div class="tarjeta-cuerpo">
+    <span class="etiqueta">Platos principales</span>
+    <h3><a href="../recetas/arroz-con-pollo.html">Arroz con pollo</a></h3>
+    <p>Arroz con pollo amarillo, cocido en una sola olla con verduras, caldo y arvejas. Un clásico de todos los días.</p>
+    <ul class="meta">
+      <li><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M8 4.5 V8 L10.5 9.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span class="vh">Tiempo total: </span>1 h 10 min</li>
+      <li><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><rect x="2" y="9" width="3" height="5" rx="1" fill="currentColor"/><rect x="6.5" y="6" width="3" height="8" rx="1" fill="currentColor"/><rect x="11" y="3" width="3" height="11" rx="1" fill="currentColor"/></svg><span class="vh">Dificultad: </span>Fácil</li>
+      <li><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="5" r="2.8" fill="currentColor"/><path d="M2.5 14 a5.5 5 0 0 1 11 0 z" fill="currentColor"/></svg><span class="vh">Rinde: </span>4 porciones</li>
+    </ul>
+  </div>
+</li>
+  </ul>
+</section>
+</div>
+</main>
+<footer class="pie">
+  <div class="contenedor">
+    <nav aria-label="Categorías del recetario">
+      <ul><li><a href="../categorias/platos-principales.html">Platos principales</a></li><li><a href="../categorias/pastas.html">Pastas</a></li><li><a href="../categorias/sopas-y-guisos.html">Sopas y guisos</a></li><li><a href="../categorias/ensaladas.html">Ensaladas</a></li><li><a href="../categorias/postres.html">Postres</a></li><li><a href="../categorias/panaderia.html">Panadería</a></li><li><a href="../categorias/bebidas.html">Bebidas</a></li></ul>
+    </nav>
+    <p>La Olla · Recetario casero. Recetas probadas, explicadas sin vueltas y pensadas para cocinar en casa.</p>
+  </div>
+</footer>
+</body>
+</html>

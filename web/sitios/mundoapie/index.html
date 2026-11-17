@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mundo a Pie – Guía de viajes por países</title>
+<meta name="description" content="Mundo a Pie es una guía de viajes simple con 15 países: qué ver, qué comer, cuándo ir, enchufes, propinas y transporte, más un comparador de países.">
+<meta name="color-scheme" content="light dark">
+<link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+<a class="saltar" href="#contenido">Saltar al contenido</a>
+<header class="cabecera">
+  <div class="contenedor cabecera__fila">
+    <a class="marca" href="index.html"><svg class="marca__logo" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><circle cx="24" cy="24" r="21" fill="none" stroke="currentColor" stroke-width="3"/><polygon points="24,8 29,24 24,40 19,24" fill="currentColor" opacity=".35"/><polygon points="24,8 29,24 19,24" fill="var(--acento)"/><circle cx="24" cy="24" r="3" fill="currentColor"/></svg><span>Mundo a Pie</span></a>
+    <nav class="nav" aria-label="Principal">
+      <ul>
+        <li><a href="index.html" aria-current="page">Inicio</a></li>
+        <li><a href="index.html#continentes">Continentes</a></li>
+        <li><a href="comparar.html">Comparar</a></li>
+        <li><a href="consejos.html">Consejos</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="contenido" tabindex="-1">
+<section class="portada">
+  <div class="contenedor">
+    <h1>Viajá por el mundo, paso a paso</h1>
+    <p class="bajada">Guías simples de 15 países: qué ver, qué comer, cuándo ir y los datos prácticos que siempre buscás a último momento.</p>
+    <form class="buscador" role="search" action="#" id="form-buscar">
+      <label for="buscador">Buscar un país, ciudad o idioma</label>
+      <input id="buscador" type="search" placeholder="Por ejemplo: Japón, Lima o portugués" autocomplete="off">
+    </form>
+    <div class="filtros" role="group" aria-label="Filtrar por continente">
+      <button type="button" class="filtro" data-filtro="todos" aria-pressed="true">Todos</button><button type="button" class="filtro" data-filtro="america-del-sur" aria-pressed="false">América del Sur</button><button type="button" class="filtro" data-filtro="america-del-norte" aria-pressed="false">América del Norte</button><button type="button" class="filtro" data-filtro="europa" aria-pressed="false">Europa</button><button type="button" class="filtro" data-filtro="asia" aria-pressed="false">Asia</button><button type="button" class="filtro" data-filtro="africa" aria-pressed="false">África</button><button type="button" class="filtro" data-filtro="oceania" aria-pressed="false">Oceanía</button>
+    </div>
+  </div>
+</section>
+
+<div class="contenedor">
+<section class="seccion" aria-labelledby="t-destinos">
+  <div class="seccion__cabeza">
+    <h2 id="t-destinos">Todos los destinos</h2>
+    <p id="contador" class="contador" aria-live="polite">15 países</p>
+  </div>
+  <ul class="tarjetas" id="lista-paises">
+<li class="tarjeta" data-continente="america-del-sur" data-texto="argentina buenos aires espanol peso argentino (ars) america del sur buenos aires cataratas del iguazu glaciar perito moreno quebrada de humahuaca bariloche y los lagos patagonicos mendoza">
+  <div class="tarjeta__ilus"><svg class="ilus" viewBox="0 0 320 200" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid slice"><rect width="320" height="200" fill="#cfe9f6"/>
+<circle cx="258" cy="44" r="18" fill="#ffe08a"/>
+<polygon points="0,140 60,80 110,120 160,70 230,125 280,90 320,115 320,200 0,200" fill="#9db6cc"/>
+<polygon points="95,140 140,40 158,72 172,30 196,82 214,58 250,140" fill="#55667e"/>
+<polygon points="140,40 150,62 158,72 164,52 172,30 180,50 172,56 162,66 152,60" fill="#ffffff"/>
+<polygon points="206,70 214,58 222,74 214,72" fill="#ffffff"/>
+<polygon points="40,150 90,128 150,138 200,126 260,140 300,150" fill="#e6f4fb"/>
+<rect y="148" width="320" height="52" fill="#4ba3c9"/>
+<path d="M0 170 q40 -8 80 0 t80 0 t80 0 t80 0" stroke="#8fd0ea" stroke-width="3" fill="none"/>
+<path d="M0 188 q40 -6 80 0 t80 0 t80 0 t80 0" stroke="#8fd0ea" stroke-width="2" fill="none"/></svg></div>
+  <div class="tarjeta__cuerpo">
+    <p class="etiqueta">América del Sur</p>
+    <h3 class="tarjeta__titulo"><a href="paises/argentina.html">Argentina</a></h3>
+    <p>Del calor del norte a los hielos de la Patagonia, Argentina reúne ciudades con mucha vida, vinos de altura y algunos de los paisajes más impactantes de América del Sur.</p>
+    <p class="tarjeta__dato"><span>Capital:</span> Buenos Aires</p>
+  </div>
+</li>
+<li class="tarjeta" data-continente="oceania" data-texto="australia canberra ingles dolar australiano (aud) oceania sidney gran barrera de coral uluru melbourne great ocean road tasmania">
+  <div class="tarjeta__ilus"><svg class="ilus" viewBox="0 0 320 200" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid slice"><rect width="320" height="200" fill="#ffe2bf"/>
+<circle cx="70" cy="44" r="22" fill="#ffd25a"/>
+<rect y="140" width="320" height="60" fill="#d7743a"/>
+<path d="M0 166 C80 156 220 158 320 164 L320 200 L0 200 Z" fill="#c25f2c"/>
+<path d="M90 142 C96 112 120 96 170 94 C220 94 248 110 256 142 Z" fill="#b8492a"/>
+<g stroke="#9a3a20" stroke-width="2" fill="none">
+<path d="M120 140 C122 120 126 108 132 102"/><path d="M160 140 C160 120 162 104 166 96"/><path d="M200 140 C202 120 206 108 214 100"/>
+</g>
+<path d="M274 172 C276 150 272 130 280 112" stroke="#e8e0d0" stroke-width="6" fill="none" stroke-linecap="round"/>
+<g fill="#7a9a5a">
+<ellipse cx="270" cy="104" rx="22" ry="14"/><ellipse cx="294" cy="110" rx="18" ry="12"/><ellipse cx="282" cy="92" rx="18" ry="12"/>
+</g>
+<g fill="#e3a05a"><circle cx="30" cy="176" r="4"/><circle cx="60" cy="182" r="3"/><circle cx="230" cy="186" r="3"/></g></svg></div>
+  <div class="tarjeta__cuerpo">
+    <p class="etiqueta">Oceanía</p>
+    <h3 class="tarjeta__titulo"><a href="paises/australia.html">Australia</a></h3>
+    <p>Un país-continente de playas surferas, desierto rojo, arrecifes de coral y animales que no existen en ningún otro lugar.</p>
+    <p class="tarjeta__dato"><span>Capital:</span> Canberra</p>
+  </div>
+</li>
+<li class="tarjeta" data-continente="america-del-sur" data-texto="brasil brasilia portugues real (brl) america del sur rio de janeiro amazonia salvador de bahia foz do iguacu florianopolis lencois maranhenses">
+  <div class="tarjeta__ilus"><svg class="ilus" viewBox="0 0 320 200" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid slice"><rect width="320" height="200" fill="#bfeaf2"/>
+<circle cx="70" cy="40" r="18" fill="#ffe27a"/>
+<path d="M150 130 C150 60 175 40 192 40 C212 40 222 80 222 130 Z" fill="#4f7a5a"/>
+<path d="M210 130 C212 96 226 82 238 82 C252 82 262 104 264 130 Z" fill="#3f6b4c"/>
+<path d="M100 130 C108 108 120 100 130 100 C142 100 150 116 154 130 Z" fill="#5f8f6a"/>
+<rect y="128" width="320" height="40" fill="#2f9fbf"/>
+<path d="M0 142 q20 -5 40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0" stroke="#8fd8ea" stroke-width="3" fill="none"/>
+<path d="M0 160 C100 150 220 150 320 158 L320 200 L0 200 Z" fill="#f6dfa4"/>
+<path d="M64 182 C66 150 62 120 70 96" stroke="#8a6440" stroke-width="7" fill="none" stroke-linecap="round"/>
+<g fill="#2f8a4e">
+<path d="M70 96 C50 84 30 88 22 100 C40 92 56 94 70 96 Z"/>
+<path d="M70 96 C86 80 108 80 118 92 C100 86 84 90 70 96 Z"/>
+<path d="M70 96 C64 74 48 66 36 68 C52 76 62 84 70 96 Z"/>
+<path d="M70 96 C80 72 96 66 108 70 C92 76 80 84 70 96 Z"/>
+</g></svg></div>
+  <div class="tarjeta__cuerpo">
+    <p class="etiqueta">América del Sur</p>
+    <h3 class="tarjeta__titulo"><a href="paises/brasil.html">Brasil</a></h3>
+    <p>El país más grande de América del Sur ofrece playas infinitas, la selva amazónica, música por todas partes y una alegría contagiosa.</p>
+    <p class="tarjeta__dato"><span>Capital:</span> Brasilia</p>
+  </div>
+</li>
+<li class="tarjeta" data-continente="america-del-norte" data-texto="canada ottawa ingles y frances dolar canadiense (cad) america del norte montanas rocosas (banff y jasper) toronto cataratas del niagara quebec vancouver montreal">
+  <div class="tarjeta__ilus"><svg class="ilus" viewBox="0 0 320 200" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid slice"><rect width="320" height="200" fill="#d7eef7"/>
+<polygon points="20,120 100,40 180,120" fill="#8494ab"/>
+<polygon points="80,60 100,40 120,60 110,66 100,58 90,66" fill="#ffffff"/>
+<polygon points="140,120 220,52 300,120" fill="#6d7d96"/>
+<polygon points="202,68 220,52 238,68 228,72 220,66 212,72" fill="#ffffff"/>
+<rect y="118" width="320" height="82" fill="#3aa6a8"/>
+<path d="M30 150 h70 M180 170 h80 M60 186 h50" stroke="#8fd6d2" stroke-width="3" stroke-linecap="round"/>
+<g fill="#24553f">
+<polygon points="0,130 12,84 24,130"/><polygon points="18,132 32,92 46,132"/><polygon points="40,128 50,98 60,128"/>
+<polygon points="262,130 274,86 286,130"/><polygon points="282,132 296,94 310,132"/><polygon points="304,128 314,100 324,128"/>
+</g>
+<path d="M130 160 Q160 172 190 160 Z" fill="#c4572e"/>
+<line x1="150" y1="164" x2="166" y2="146" stroke="#6b4a33" stroke-width="2.5"/>
+<circle cx="160" cy="154" r="4" fill="#f2c69a"/></svg></div>
+  <div class="tarjeta__cuerpo">
+    <p class="etiqueta">América del Norte</p>
+    <h3 class="tarjeta__titulo"><a href="paises/canada.html">Canadá</a></h3>
+    <p>Bosques infinitos, lagos turquesa, montañas nevadas y ciudades multiculturales: Canadá es naturaleza a gran escala.</p>
+    <p class="tarjeta__dato"><span>Capital:</span> Ottawa</p>
+  </div>
+</li>
+<li class="tarjeta" data-continente="america-del-sur" data-texto="chile santiago espanol peso chileno (clp) america del sur santiago valparaiso desierto de atacama torres del paine isla de pascua (rapa nui) puerto varas y chiloe">
+  <div class="tarjeta__ilus"><svg class="ilus" viewBox="0 0 320 200" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid slice"><rect width="320" height="200" fill="#d6ecf5"/>
+<circle cx="60" cy="40" r="16" fill="#fff1b0"/>
+<polygon points="70,140 160,36 250,140" fill="#6f7f95"/>
+<polygon points="134,66 160,36 186,66 176,72 166,64 156,74 146,64" fill="#ffffff"/>
+<polygon points="0,140 50,112 90,140" fill="#5c8a63"/>
+<polygon points="230,140 290,104 320,124 320,140" fill="#5c8a63"/>
+<rect y="140" width="320" height="60" fill="#3f8fb0"/>
+<polygon points="110,140 160,186 210,140" fill="#5e8fa8"/>
+<g fill="#2f5d3a">
+<polygon points="16,150 26,118 36,150"/><polygon points="34,152 44,126 54,152"/>
+<polygon points="262,150 272,114 282,150"/><polygon points="282,152 292,124 302,152"/>
+<polygon points="300,150 308,130 316,150"/>
+</g>
+<path d="M30 172 h60 M200 182 h70" stroke="#8cc7de" stroke-width="3" stroke-linecap="round"/></svg></div>
+  <div class="tarjeta__cuerpo">
+    <p class="etiqueta">América del Sur</p>
+    <h3 class="tarjeta__titulo"><a href="paises/chile.html">Chile</a></h3>
+    <p>Un país larguísimo y angosto que va del desierto más árido a los glaciares del sur, con la cordillera de los Andes siempre a la vista.</p>
+    <p class="tarjeta__dato"><span>Capital:</span> Santiago</p>
+  </div>
+</li>
+<li class="tarjeta" data-continente="africa" data-texto="egipto el cairo arabe libra egipcia (egp) africa piramides de guiza y la esfinge el cairo luxor asuan abu simbel mar rojo">
+  <div class="tarjeta__ilus"><svg class="ilus" viewBox="0 0 320 200" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid slice"><rect width="320" height="200" fill="#fff0cf"/>
+<circle cx="244" cy="50" r="26" fill="#ffc04d"/>
+<path d="M0 150 C80 136 220 136 320 146 L320 200 L0 200 Z" fill="#ecc27a"/>
+<polygon points="40,150 110,64 180,150" fill="#d9a65a"/>
+<polygon points="110,64 180,150 120,150" fill="#b98845"/>
+<polygon points="150,150 206,84 262,150" fill="#d9a65a"/>
+<polygon points="206,84 262,150 214,150" fill="#b98845"/>
+<polygon points="250,152 280,116 310,152" fill="#d9a65a"/>
+<polygon points="280,116 310,152 284,152" fill="#b98845"/>
+<path d="M0 178 C90 166 230 168 320 176 L320 200 L0 200 Z" fill="#e0b062"/>
+<path d="M28 182 C30 160 26 140 32 124" stroke="#8a6440" stroke-width="5" fill="none" stroke-linecap="round"/>
+<g fill="#4f8a4e">
+<path d="M32 124 C18 116 6 120 2 128 C14 122 24 122 32 124 Z"/>
+<path d="M32 124 C44 112 58 114 64 122 C52 118 42 120 32 124 Z"/>
+<path d="M32 124 C30 108 20 102 12 104 C22 110 28 116 32 124 Z"/>
+</g></svg></div>
+  <div class="tarjeta__cuerpo">
+    <p class="etiqueta">África</p>
+    <h3 class="tarjeta__titulo"><a href="paises/egipto.html">Egipto</a></h3>
+    <p>Pirámides, templos faraónicos y cruceros por el Nilo: Egipto permite recorrer cinco mil años de historia, con el Mar Rojo como bonus.</p>
+    <p class="tarjeta__dato"><span>Capital:</span> El Cairo</p>
+  </div>
+</li>
+<li class="tarjeta" data-continente="europa" data-texto="espana madrid espanol; tambien catalan, gallego y euskera en sus comunidades euro (eur) europa madrid barcelona sevilla granada y la alhambra camino de santiago islas canarias y baleares">
+  <div class="tarjeta__ilus"><svg class="ilus" viewBox="0 0 320 200" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid slice"><rect width="320" height="200" fill="#fdeec9"/>
+<circle cx="260" cy="44" r="20" fill="#ffb84d"/>
+<path d="M0 150 C80 110 200 112 320 140 L320 200 L0 200 Z" fill="#e8c66a"/>
+<path d="M0 172 C100 150 220 156 320 168 L320 200 L0 200 Z" fill="#d9ad4c"/>
+<polygon points="128,140 134,74 166,74 172,140" fill="#ffffff"/>
+<path d="M128 140 L172 140" stroke="#c9b08a" stroke-width="2"/>
+<path d="M128 76 Q150 52 172 76 Z" fill="#6b4a33"/>
+<rect x="144" y="114" width="12" height="26" fill="#6b4a33"/>
+<rect x="146" y="88" width="8" height="10" fill="#6b4a33"/>
+<g stroke="#6b4a33" stroke-width="3">
+<line x1="150" y1="78" x2="104" y2="34"/><line x1="150" y1="78" x2="196" y2="34"/>
+<line x1="150" y1="78" x2="104" y2="122"/><line x1="150" y1="78" x2="196" y2="122"/>
+</g>
+<g fill="#f3f1ea" stroke="#6b4a33" stroke-width="1.5">
+<polygon points="104,34 116,30 134,48 126,54"/><polygon points="196,34 200,46 182,64 176,56"/>
+<polygon points="104,122 100,110 118,92 124,100"/><polygon points="196,122 184,126 166,108 174,102"/>
+</g>
+<circle cx="150" cy="78" r="5" fill="#6b4a33"/>
+<g fill="#8a9a4a"><circle cx="40" cy="146" r="8"/><circle cx="56" cy="144" r="6"/><circle cx="270" cy="142" r="7"/></g></svg></div>
+  <div class="tarjeta__cuerpo">
+    <p class="etiqueta">Europa</p>
+    <h3 class="tarjeta__titulo"><a href="paises/espana.html">España</a></h3>
+    <p>Ciudades con siglos de historia, playas mediterráneas, tapas a toda hora y fiestas populares hacen de España un destino clásico que nunca aburre.</p>
+    <p class="tarjeta__dato"><span>Capital:</span> Madrid</p>
+  </div>
+</li>
+<li class="tarjeta" data-continente="europa" data-texto="francia paris frances euro (eur) europa paris valle del loira provenza costa azul mont-saint-michel chamonix y el mont blanc">
+  <div class="tarjeta__ilus"><svg class="ilus" viewBox="0 0 320 200" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid slice"><rect width="320" height="200" fill="#f2e8f7"/>
+<circle cx="70" cy="46" r="18" fill="#ffd27a"/>
+<path d="M0 112 C80 100 220 100 320 110 L320 200 L0 200 Z" fill="#a8c47a"/>
+<g fill="#4a4a5a">
+<polygon points="236,112 250,24 264,112 258,112 250,52 242,112"/>
+<rect x="238" y="80" width="24" height="4"/><rect x="243" y="56" width="14" height="3"/>
+<path d="M234 112 Q250 92 266 112 h-6 Q250 100 240 112 Z"/>
+</g>
+<g fill="#8a6bbf">
+<path d="M0 128 L320 118 L320 128 L0 142 Z"/>
+<path d="M0 152 L320 134 L320 146 L0 168 Z"/>
+<path d="M0 180 L320 152 L320 166 L0 200 Z"/>
+<path d="M60 200 L320 172 L320 188 L140 200 Z"/>
+</g>
+<g fill="#b39ad9">
+<path d="M0 142 L320 128 L320 134 L0 152 Z" opacity=".55"/>
+<path d="M0 168 L320 146 L320 152 L0 180 Z" opacity=".55"/>
+</g></svg></div>
+  <div class="tarjeta__cuerpo">
+    <p class="etiqueta">Europa</p>
+    <h3 class="tarjeta__titulo"><a href="paises/francia.html">Francia</a></h3>
+    <p>París es solo el comienzo: Francia suma castillos, viñedos, campos de lavanda, la Riviera y los Alpes en un mismo viaje.</p>
+    <p class="tarjeta__dato"><span>Capital:</span> París</p>
+  </div>
+</li>
+<li class="tarjeta" data-continente="europa" data-texto="italia roma italiano euro (eur) europa roma florencia venecia costa amalfitana cinque terre toscana">
+  <div class="tarjeta__ilus"><svg class="ilus" viewBox="0 0 320 200" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid slice"><rect width="320" height="200" fill="#e7f1fb"/>
+<circle cx="56" cy="44" r="16" fill="#ffe08a"/>
+<path d="M0 150 C60 120 120 130 170 146 C220 126 280 120 320 136 L320 200 L0 200 Z" fill="#9cbf6b"/>
+<path d="M0 176 C90 156 210 160 320 172 L320 200 L0 200 Z" fill="#7da653"/>
+<g transform="rotate(6 160 150)">
+<rect x="138" y="44" width="44" height="106" fill="#f4ecdc" stroke="#c9b99a" stroke-width="2"/>
+<rect x="142" y="30" width="36" height="14" fill="#efe4cf" stroke="#c9b99a" stroke-width="2"/>
+<g stroke="#c9b99a" stroke-width="2"><path d="M138 66 h44 M138 88 h44 M138 110 h44 M138 132 h44"/></g>
+<g fill="#c9b99a">
+<rect x="144" y="70" width="6" height="12" rx="3"/><rect x="157" y="70" width="6" height="12" rx="3"/><rect x="170" y="70" width="6" height="12" rx="3"/>
+<rect x="144" y="92" width="6" height="12" rx="3"/><rect x="157" y="92" width="6" height="12" rx="3"/><rect x="170" y="92" width="6" height="12" rx="3"/>
+<rect x="144" y="114" width="6" height="12" rx="3"/><rect x="157" y="114" width="6" height="12" rx="3"/><rect x="170" y="114" width="6" height="12" rx="3"/>
+</g>
+</g>
+<g fill="#2f5a36">
+<ellipse cx="60" cy="140" rx="7" ry="26"/><ellipse cx="78" cy="146" rx="6" ry="20"/>
+<ellipse cx="248" cy="132" rx="7" ry="28"/><ellipse cx="266" cy="138" rx="6" ry="22"/><ellipse cx="282" cy="142" rx="5" ry="18"/>
+</g></svg></div>
+  <div class="tarjeta__cuerpo">
+    <p class="etiqueta">Europa</p>
+    <h3 class="tarjeta__titulo"><a href="paises/italia.html">Italia</a></h3>
+    <p>Arte en cada esquina, ruinas romanas, pueblos sobre colinas y una cocina que el mundo entero imita: Italia es un museo a cielo abierto.</p>
+    <p class="tarjeta__dato"><span>Capital:</span> Roma</p>
+  </div>
+</li>
+<li class="tarjeta" data-continente="asia" data-texto="japon tokio japones yen (jpy) asia tokio kioto monte fuji nara hiroshima y miyajima osaka">
+  <div class="tarjeta__ilus"><svg class="ilus" viewBox="0 0 320 200" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid slice"><rect width="320" height="200" fill="#fde6ea"/>
+<circle cx="70" cy="50" r="18" fill="#ffb3a7"/>
+<polygon points="70,130 170,40 270,130" fill="#7b8db0"/>
+<path d="M140 67 L170 40 L200 67 L190 74 L180 66 L170 76 L160 66 L150 74 Z" fill="#ffffff"/>
+<rect y="128" width="320" height="72" fill="#7fb6d6"/>
+<path d="M20 150 h50 M120 166 h40 M220 156 h60 M40 184 h70" stroke="#b9dcec" stroke-width="3" stroke-linecap="round"/>
+<g fill="#d8433a">
+<rect x="226" y="98" width="8" height="58"/><rect x="266" y="98" width="8" height="58"/>
+<path d="M212 92 Q250 84 288 92 L290 100 L210 100 Z"/>
+<rect x="220" y="108" width="60" height="6"/>
+</g>
+<rect x="208" y="88" width="84" height="4" fill="#3a2a2a"/>
+<g fill="#f7a6b8">
+<circle cx="24" cy="24" r="6"/><circle cx="36" cy="16" r="5"/><circle cx="16" cy="38" r="5"/>
+<circle cx="300" cy="24" r="6"/><circle cx="290" cy="36" r="5"/><circle cx="308" cy="44" r="4"/>
+<circle cx="120" cy="20" r="3"/><circle cx="210" cy="30" r="3"/>
+</g></svg></div>
+  <div class="tarjeta__cuerpo">
+    <p class="etiqueta">Asia</p>
+    <h3 class="tarjeta__titulo"><a href="paises/japon.html">Japón</a></h3>
+    <p>Templos milenarios y ciudades futuristas, trenes puntualísimos y una cultura del detalle: Japón sorprende en cada esquina.</p>
+    <p class="tarjeta__dato"><span>Capital:</span> Tokio</p>
+  </div>
+</li>
+<li class="tarjeta" data-continente="africa" data-texto="marruecos rabat arabe y amazig (bereber); el frances es muy usado dirham marroqui (mad) africa marrakech fez chefchaouen desierto del sahara (merzouga) ait ben haddou essaouira">
+  <div class="tarjeta__ilus"><svg class="ilus" viewBox="0 0 320 200" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid slice"><rect width="320" height="200" fill="#3b2f63"/>
+<rect y="70" width="320" height="60" fill="#6a4a7a"/>
+<circle cx="250" cy="44" r="16" fill="#fff3c4"/>
+<circle cx="258" cy="38" r="14" fill="#3b2f63"/>
+<g fill="#ffffff"><circle cx="40" cy="30" r="1.8"/><circle cx="90" cy="18" r="1.5"/><circle cx="150" cy="40" r="1.8"/><circle cx="200" cy="20" r="1.4"/><circle cx="300" cy="80" r="1.4"/><circle cx="20" cy="70" r="1.4"/></g>
+<path d="M0 140 C60 100 120 104 170 130 C220 104 280 100 320 120 L320 200 L0 200 Z" fill="#d98b4a"/>
+<path d="M0 170 C80 140 180 150 320 160 L320 200 L0 200 Z" fill="#c47538"/>
+<g>
+<rect x="36" y="86" width="88" height="70" fill="#e8d2b0"/>
+<path d="M58 156 V118 A22 24 0 1 1 102 118 V156 Z" fill="#2f6aa3"/>
+<path d="M58 118 A22 24 0 0 1 102 118" stroke="#c9a46a" stroke-width="3" fill="none"/>
+<rect x="36" y="80" width="88" height="8" fill="#c9a46a"/>
+<g fill="#c9a46a"><rect x="40" y="72" width="10" height="8"/><rect x="60" y="72" width="10" height="8"/><rect x="90" y="72" width="10" height="8"/><rect x="110" y="72" width="10" height="8"/></g>
+</g></svg></div>
+  <div class="tarjeta__cuerpo">
+    <p class="etiqueta">África</p>
+    <h3 class="tarjeta__titulo"><a href="paises/marruecos.html">Marruecos</a></h3>
+    <p>Medinas laberínticas, zocos llenos de aromas, las montañas del Atlas y las dunas del Sahara: Marruecos queda a un paso de Europa, pero se siente otro mundo.</p>
+    <p class="tarjeta__dato"><span>Capital:</span> Rabat</p>
+  </div>
+</li>
+<li class="tarjeta" data-continente="america-del-norte" data-texto="mexico ciudad de mexico espanol y 68 lenguas indigenas reconocidas, como el nahuatl y el maya peso mexicano (mxn) america del norte ciudad de mexico teotihuacan chichen itza oaxaca caribe mexicano guanajuato y san miguel de allende">
+  <div class="tarjeta__ilus"><svg class="ilus" viewBox="0 0 320 200" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid slice"><rect width="320" height="200" fill="#ffe7c2"/>
+<circle cx="250" cy="50" r="24" fill="#ffb347"/>
+<rect y="160" width="320" height="40" fill="#e3b36f"/>
+<g fill="#b9875a">
+<rect x="70" y="140" width="160" height="20"/><rect x="85" y="120" width="130" height="20"/>
+<rect x="100" y="100" width="100" height="20"/><rect x="115" y="80" width="70" height="20"/>
+</g>
+<rect x="132" y="62" width="36" height="18" fill="#9a6c45"/>
+<rect x="144" y="68" width="12" height="12" fill="#5b3c22"/>
+<rect x="141" y="80" width="18" height="80" fill="#d7a874"/>
+<g stroke="#9a6c45" stroke-width="2"><path d="M141 92 h18 M141 104 h18 M141 116 h18 M141 128 h18 M141 140 h18 M141 152 h18"/></g>
+<g fill="#3e8e5a">
+<rect x="264" y="104" width="14" height="60" rx="7"/>
+<path d="M264 136 h-12 a6 6 0 0 1 -6 -6 v-14 a5 5 0 0 1 10 0 v10 h8 z"/>
+<path d="M278 128 h12 a6 6 0 0 0 6 -6 v-14 a5 5 0 0 0 -10 0 v10 h-8 z"/>
+</g></svg></div>
+  <div class="tarjeta__cuerpo">
+    <p class="etiqueta">América del Norte</p>
+    <h3 class="tarjeta__titulo"><a href="paises/mexico.html">México</a></h3>
+    <p>Pirámides, playas del Caribe, ciudades coloniales y una cocina declarada Patrimonio de la Humanidad: México tiene planes para todos los gustos.</p>
+    <p class="tarjeta__dato"><span>Capital:</span> Ciudad de México</p>
+  </div>
+</li>
+<li class="tarjeta" data-continente="europa" data-texto="noruega oslo noruego (bokmal y nynorsk) y lenguas sami corona noruega (nok) europa fiordos del oeste bergen islas lofoten tromsø oslo preikestolen">
+  <div class="tarjeta__ilus"><svg class="ilus" viewBox="0 0 320 200" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid slice"><rect width="320" height="200" fill="#16243f"/>
+<path d="M0 60 C60 30 120 80 180 46 C230 20 280 54 320 34" stroke="#5fe0a8" stroke-width="10" fill="none" opacity=".75" stroke-linecap="round"/>
+<path d="M0 80 C70 54 130 96 190 66 C240 42 290 70 320 56" stroke="#8a7ff0" stroke-width="6" fill="none" opacity=".55" stroke-linecap="round"/>
+<g fill="#ffffff"><circle cx="30" cy="20" r="1.5"/><circle cx="110" cy="16" r="1.4"/><circle cx="210" cy="12" r="1.6"/><circle cx="290" cy="90" r="1.3"/><circle cx="150" cy="100" r="1.2"/></g>
+<polygon points="0,200 0,100 50,84 90,120 120,200" fill="#2c3b57"/>
+<polygon points="320,200 320,96 270,80 230,118 200,200" fill="#26344e"/>
+<polygon points="46,86 50,84 62,96 54,94" fill="#dfe8f2"/>
+<polygon points="266,82 270,80 284,92 274,90" fill="#dfe8f2"/>
+<polygon points="110,200 140,140 180,140 210,200" fill="#2a5470"/>
+<path d="M130 170 h50 M124 186 h66" stroke="#5fa0bf" stroke-width="2" stroke-linecap="round"/>
+<rect x="64" y="128" width="26" height="18" fill="#c23b30"/>
+<polygon points="60,130 77,116 94,130" fill="#5a2a24"/>
+<rect x="73" y="136" width="7" height="10" fill="#ffd77a"/></svg></div>
+  <div class="tarjeta__cuerpo">
+    <p class="etiqueta">Europa</p>
+    <h3 class="tarjeta__titulo"><a href="paises/noruega.html">Noruega</a></h3>
+    <p>Fiordos profundos, sol de medianoche en verano y auroras boreales en invierno: Noruega tiene algunos de los paisajes más espectaculares de Europa.</p>
+    <p class="tarjeta__dato"><span>Capital:</span> Oslo</p>
+  </div>
+</li>
+<li class="tarjeta" data-continente="america-del-sur" data-texto="peru lima espanol, quechua y aimara sol (pen) america del sur machu picchu cusco y el valle sagrado lima lago titicaca arequipa y el canon del colca lineas de nazca">
+  <div class="tarjeta__ilus"><svg class="ilus" viewBox="0 0 320 200" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid slice"><rect width="320" height="200" fill="#dff0e9"/>
+<polygon points="150,120 210,26 270,120" fill="#3f7a52"/>
+<polygon points="196,48 210,26 224,48 210,44" fill="#5e9a6d"/>
+<polygon points="0,130 60,70 130,130" fill="#7aa68a"/>
+<rect y="118" width="320" height="82" fill="#6fa463"/>
+<rect y="132" width="320" height="10" fill="#5d9152"/>
+<rect y="152" width="320" height="10" fill="#5d9152"/>
+<rect y="172" width="320" height="10" fill="#5d9152"/>
+<g fill="#c9b79c" stroke="#9a8669" stroke-width="2">
+<rect x="70" y="96" width="34" height="24"/><rect x="110" y="104" width="26" height="16"/>
+<rect x="40" y="104" width="24" height="16"/>
+</g>
+<g fill="#7d5a3c"><polygon points="66,96 87,82 108,96"/><polygon points="36,104 52,92 68,104"/></g>
+<circle cx="276" cy="36" r="12" fill="#ffe08a"/>
+<path d="M30 30 q10 -8 20 0 M60 22 q8 -6 16 0" stroke="#ffffff" stroke-width="4" fill="none" stroke-linecap="round"/></svg></div>
+  <div class="tarjeta__cuerpo">
+    <p class="etiqueta">América del Sur</p>
+    <h3 class="tarjeta__titulo"><a href="paises/peru.html">Perú</a></h3>
+    <p>Herencia inca, selva amazónica, desiertos costeros y una de las cocinas más celebradas del mundo: Perú es un viaje intenso y lleno de sabores.</p>
+    <p class="tarjeta__dato"><span>Capital:</span> Lima</p>
+  </div>
+</li>
+<li class="tarjeta" data-continente="america-del-sur" data-texto="uruguay montevideo espanol peso uruguayo (uyu) america del sur montevideo colonia del sacramento punta del este cabo polonio punta del diablo">
+  <div class="tarjeta__ilus"><svg class="ilus" viewBox="0 0 320 200" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid slice"><rect width="320" height="200" fill="#ffd9a8"/>
+<rect y="0" width="320" height="60" fill="#ffc48a"/>
+<circle cx="110" cy="120" r="34" fill="#ff9a52"/>
+<rect y="120" width="320" height="50" fill="#3d8fb5"/>
+<path d="M0 135 q30 -6 60 0 t60 0 t60 0 t60 0 t60 0 t60 0" stroke="#7cc0dc" stroke-width="3" fill="none"/>
+<path d="M0 166 C80 150 180 152 320 160 L320 200 L0 200 Z" fill="#f2d49b"/>
+<polygon points="200,150 216,150 228,170 192,170" fill="#7a6a5a"/>
+<polygon points="236,60 262,60 268,160 230,160" fill="#ffffff"/>
+<polygon points="234,85 264,85 265,100 233,100" fill="#d9483b"/>
+<polygon points="232,122 266,122 267,138 231,138" fill="#d9483b"/>
+<rect x="232" y="44" width="34" height="16" fill="#3a3f4a"/>
+<rect x="238" y="47" width="22" height="10" fill="#ffe38a"/>
+<polygon points="230,44 249,30 268,44" fill="#d9483b"/>
+<polygon points="226,160 272,160 276,172 222,172" fill="#7a6a5a"/></svg></div>
+  <div class="tarjeta__cuerpo">
+    <p class="etiqueta">América del Sur</p>
+    <h3 class="tarjeta__titulo"><a href="paises/uruguay.html">Uruguay</a></h3>
+    <p>Tranquilo, cercano y con mucha costa, Uruguay combina playas atlánticas, pueblos coloniales y una capital relajada frente al Río de la Plata.</p>
+    <p class="tarjeta__dato"><span>Capital:</span> Montevideo</p>
+  </div>
+</li>
+  </ul>
+  <p id="sin-resultados" class="vacio" hidden>No encontramos países con esa búsqueda. Probá con otro nombre o elegí “Todos”.</p>
+</section>
+
+<section class="seccion destacado" aria-labelledby="t-destacado">
+  <div class="destacado__ilus"><svg class="ilus" viewBox="0 0 320 200" role="img" aria-label="Montaña nevada con un portal rojo sobre el agua y flores de cerezo" preserveAspectRatio="xMidYMid slice"><rect width="320" height="200" fill="#fde6ea"/>
+<circle cx="70" cy="50" r="18" fill="#ffb3a7"/>
+<polygon points="70,130 170,40 270,130" fill="#7b8db0"/>
+<path d="M140 67 L170 40 L200 67 L190 74 L180 66 L170 76 L160 66 L150 74 Z" fill="#ffffff"/>
+<rect y="128" width="320" height="72" fill="#7fb6d6"/>
+<path d="M20 150 h50 M120 166 h40 M220 156 h60 M40 184 h70" stroke="#b9dcec" stroke-width="3" stroke-linecap="round"/>
+<g fill="#d8433a">
+<rect x="226" y="98" width="8" height="58"/><rect x="266" y="98" width="8" height="58"/>
+<path d="M212 92 Q250 84 288 92 L290 100 L210 100 Z"/>
+<rect x="220" y="108" width="60" height="6"/>
+</g>
+<rect x="208" y="88" width="84" height="4" fill="#3a2a2a"/>
+<g fill="#f7a6b8">
+<circle cx="24" cy="24" r="6"/><circle cx="36" cy="16" r="5"/><circle cx="16" cy="38" r="5"/>
+<circle cx="300" cy="24" r="6"/><circle cx="290" cy="36" r="5"/><circle cx="308" cy="44" r="4"/>
+<circle cx="120" cy="20" r="3"/><circle cx="210" cy="30" r="3"/>
+</g></svg></div>
+  <div class="destacado__texto">
+    <p class="etiqueta">Destino destacado</p>
+    <h2 id="t-destacado">Japón: cerezos, templos y trenes bala</h2>
+    <p>Templos milenarios y ciudades futuristas, trenes puntualísimos y una cultura del detalle: Japón sorprende en cada esquina. La mejor época: marzo a mayo (cerezos en flor) y octubre a noviembre (hojas rojas de otoño).</p>
+    <ul class="lista-check"><li>Tokio</li><li>Kioto</li><li>Monte Fuji</li><li>Nara</li></ul>
+    <p class="botonera">
+      <a class="boton" href="paises/japon.html">Leer la guía de Japón</a>
+      <button type="button" class="boton boton--secundario" id="azar">Llevame a un destino al azar</button>
+    </p>
+  </div>
+</section>
+
+<section class="seccion" id="continentes" aria-labelledby="t-continentes">
+  <h2 id="t-continentes">Explorá por continente</h2>
+  <ul class="continentes">
+<li><a class="continente" href="continentes/america-del-sur.html"><span class="continente__nombre">América del Sur</span><span class="continente__cant">5 países</span></a></li>
+<li><a class="continente" href="continentes/america-del-norte.html"><span class="continente__nombre">América del Norte</span><span class="continente__cant">2 países</span></a></li>
+<li><a class="continente" href="continentes/europa.html"><span class="continente__nombre">Europa</span><span class="continente__cant">4 países</span></a></li>
+<li><a class="continente" href="continentes/asia.html"><span class="continente__nombre">Asia</span><span class="continente__cant">1 país</span></a></li>
+<li><a class="continente" href="continentes/africa.html"><span class="continente__nombre">África</span><span class="continente__cant">2 países</span></a></li>
+<li><a class="continente" href="continentes/oceania.html"><span class="continente__nombre">Oceanía</span><span class="continente__cant">1 país</span></a></li>
+  </ul>
+</section>
+
+<section class="seccion grilla-2" aria-label="Herramientas para planificar">
+  <div class="caja caja--herramienta">
+    <h2 class="h3">Compará dos países</h2>
+    <p>Población, superficie, moneda, diferencia horaria y mejor época, lado a lado.</p>
+    <p><a class="boton" href="comparar.html">Abrir el comparador</a></p>
+  </div>
+  <div class="caja caja--herramienta">
+    <h2 class="h3">Armá la valija sin olvidos</h2>
+    <p>Consejos generales y una checklist interactiva que recuerda lo que ya marcaste.</p>
+    <p><a class="boton" href="consejos.html">Ver consejos para viajar</a></p>
+  </div>
+</section>
+</div>
+</main>
+<footer class="pie">
+  <div class="contenedor pie__grilla">
+    <div>
+      <p class="pie__marca">Mundo a Pie</p>
+      <p>Una guía de viajes simple, hecha para planificar sin vueltas. Los datos son aproximados: confirmá requisitos, precios y horarios antes de viajar.</p>
+    </div>
+    <nav aria-label="Continentes">
+      <p class="pie__titulo">Continentes</p>
+      <ul><li><a href="continentes/america-del-sur.html">América del Sur</a></li><li><a href="continentes/america-del-norte.html">América del Norte</a></li><li><a href="continentes/europa.html">Europa</a></li><li><a href="continentes/asia.html">Asia</a></li><li><a href="continentes/africa.html">África</a></li><li><a href="continentes/oceania.html">Oceanía</a></li></ul>
+    </nav>
+    <nav aria-label="Herramientas">
+      <p class="pie__titulo">Herramientas</p>
+      <ul>
+        <li><a href="index.html">Todos los países</a></li>
+        <li><a href="comparar.html">Comparador de países</a></li>
+        <li><a href="consejos.html">Consejos y checklist de valija</a></li>
+      </ul>
+    </nav>
+  </div>
+  <p class="contenedor pie__legal">Mundo a Pie · Ilustraciones y textos propios · Funciona sin conexión.</p>
+</footer>
+<script src="js/portada.js"></script>
+</body>
+</html>

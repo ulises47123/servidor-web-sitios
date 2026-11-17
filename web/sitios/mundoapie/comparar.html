@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Comparador de países – Mundo a Pie</title>
+<meta name="description" content="Compará dos países lado a lado: población, superficie, densidad, moneda, idioma, diferencia horaria y mejor época para viajar.">
+<meta name="color-scheme" content="light dark">
+<link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+<a class="saltar" href="#contenido">Saltar al contenido</a>
+<header class="cabecera">
+  <div class="contenedor cabecera__fila">
+    <a class="marca" href="index.html"><svg class="marca__logo" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><circle cx="24" cy="24" r="21" fill="none" stroke="currentColor" stroke-width="3"/><polygon points="24,8 29,24 24,40 19,24" fill="currentColor" opacity=".35"/><polygon points="24,8 29,24 19,24" fill="var(--acento)"/><circle cx="24" cy="24" r="3" fill="currentColor"/></svg><span>Mundo a Pie</span></a>
+    <nav class="nav" aria-label="Principal">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="index.html#continentes">Continentes</a></li>
+        <li><a href="comparar.html" aria-current="page">Comparar</a></li>
+        <li><a href="consejos.html">Consejos</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="contenido" tabindex="-1">
+<div class="contenedor">
+<header class="intro">
+  <h1>Comparador de países</h1>
+  <p class="bajada">Elegí dos destinos y mirá sus datos lado a lado: cuál es más grande, cuál tiene más gente, cuántas horas de diferencia hay entre sus capitales y cuándo conviene ir a cada uno.</p>
+</header>
+
+<form class="comparador" id="form-comparar" action="comparar.html" method="get">
+  <div class="campo"><label for="pais-a">Primer país</label><select id="pais-a" name="a"><option value="argentina" selected>Argentina</option><option value="australia">Australia</option><option value="brasil">Brasil</option><option value="canada">Canadá</option><option value="chile">Chile</option><option value="egipto">Egipto</option><option value="espana">España</option><option value="francia">Francia</option><option value="italia">Italia</option><option value="japon">Japón</option><option value="marruecos">Marruecos</option><option value="mexico">México</option><option value="noruega">Noruega</option><option value="peru">Perú</option><option value="uruguay">Uruguay</option></select></div>
+  <button type="button" class="boton boton--icono" id="intercambiar" aria-label="Intercambiar países">⇄</button>
+  <div class="campo"><label for="pais-b">Segundo país</label><select id="pais-b" name="b"><option value="argentina">Argentina</option><option value="australia">Australia</option><option value="brasil">Brasil</option><option value="canada">Canadá</option><option value="chile">Chile</option><option value="egipto">Egipto</option><option value="espana">España</option><option value="francia">Francia</option><option value="italia">Italia</option><option value="japon" selected>Japón</option><option value="marruecos">Marruecos</option><option value="mexico">México</option><option value="noruega">Noruega</option><option value="peru">Perú</option><option value="uruguay">Uruguay</option></select></div>
+  <noscript><button class="boton" type="submit">Comparar</button></noscript>
+</form>
+
+<section class="seccion" aria-labelledby="t-resultado">
+  <h2 id="t-resultado" class="visualmente-oculto">Resultado de la comparación</h2>
+  <div id="resultado" aria-live="polite">
+    <p class="nota">Activá JavaScript para ver la comparación detallada. Mientras tanto, abajo tenés la tabla general con todos los países.</p>
+  </div>
+</section>
+
+<section class="seccion" aria-labelledby="t-tabla">
+  <h2 id="t-tabla">Tabla general de países</h2>
+  <p>Husos horarios de las capitales sin contar el horario de verano.</p>
+  <div class="tabla-envoltorio" tabindex="0" role="region" aria-labelledby="t-tabla">
+    <table class="tabla">
+      <thead><tr><th scope="col">País</th><th scope="col">Continente</th><th scope="col">Capital</th><th scope="col">Población</th><th scope="col">Superficie</th><th scope="col">Huso</th></tr></thead>
+      <tbody>
+<tr><th scope="row"><a href="paises/argentina.html">Argentina</a></th><td>América del Sur</td><td>Buenos Aires</td><td>≈ 46 millones</td><td>2.780.400 km²</td><td>UTC−3</td></tr>
+<tr><th scope="row"><a href="paises/australia.html">Australia</a></th><td>Oceanía</td><td>Canberra</td><td>≈ 27 millones</td><td>7.692.024 km²</td><td>UTC+10</td></tr>
+<tr><th scope="row"><a href="paises/brasil.html">Brasil</a></th><td>América del Sur</td><td>Brasilia</td><td>≈ 212 millones</td><td>8.515.767 km²</td><td>UTC−3</td></tr>
+<tr><th scope="row"><a href="paises/canada.html">Canadá</a></th><td>América del Norte</td><td>Ottawa</td><td>≈ 41 millones</td><td>9.984.670 km²</td><td>UTC−5</td></tr>
+<tr><th scope="row"><a href="paises/chile.html">Chile</a></th><td>América del Sur</td><td>Santiago</td><td>≈ 19,7 millones</td><td>756.102 km²</td><td>UTC−4</td></tr>
+<tr><th scope="row"><a href="paises/egipto.html">Egipto</a></th><td>África</td><td>El Cairo</td><td>≈ 108 millones</td><td>1.001.450 km²</td><td>UTC+2</td></tr>
+<tr><th scope="row"><a href="paises/espana.html">España</a></th><td>Europa</td><td>Madrid</td><td>≈ 49 millones</td><td>505.990 km²</td><td>UTC+1</td></tr>
+<tr><th scope="row"><a href="paises/francia.html">Francia</a></th><td>Europa</td><td>París</td><td>≈ 68 millones</td><td>551.695 km²</td><td>UTC+1</td></tr>
+<tr><th scope="row"><a href="paises/italia.html">Italia</a></th><td>Europa</td><td>Roma</td><td>≈ 59 millones</td><td>302.073 km²</td><td>UTC+1</td></tr>
+<tr><th scope="row"><a href="paises/japon.html">Japón</a></th><td>Asia</td><td>Tokio</td><td>≈ 123 millones</td><td>377.975 km²</td><td>UTC+9</td></tr>
+<tr><th scope="row"><a href="paises/marruecos.html">Marruecos</a></th><td>África</td><td>Rabat</td><td>≈ 37 millones</td><td>446.550 km²</td><td>UTC+1</td></tr>
+<tr><th scope="row"><a href="paises/mexico.html">México</a></th><td>América del Norte</td><td>Ciudad de México</td><td>≈ 130 millones</td><td>1.964.375 km²</td><td>UTC−6</td></tr>
+<tr><th scope="row"><a href="paises/noruega.html">Noruega</a></th><td>Europa</td><td>Oslo</td><td>≈ 5,6 millones</td><td>385.207 km²</td><td>UTC+1</td></tr>
+<tr><th scope="row"><a href="paises/peru.html">Perú</a></th><td>América del Sur</td><td>Lima</td><td>≈ 34 millones</td><td>1.285.216 km²</td><td>UTC−5</td></tr>
+<tr><th scope="row"><a href="paises/uruguay.html">Uruguay</a></th><td>América del Sur</td><td>Montevideo</td><td>≈ 3,4 millones</td><td>176.215 km²</td><td>UTC−3</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+</div>
+</main>
+<footer class="pie">
+  <div class="contenedor pie__grilla">
+    <div>
+      <p class="pie__marca">Mundo a Pie</p>
+      <p>Una guía de viajes simple, hecha para planificar sin vueltas. Los datos son aproximados: confirmá requisitos, precios y horarios antes de viajar.</p>
+    </div>
+    <nav aria-label="Continentes">
+      <p class="pie__titulo">Continentes</p>
+      <ul><li><a href="continentes/america-del-sur.html">América del Sur</a></li><li><a href="continentes/america-del-norte.html">América del Norte</a></li><li><a href="continentes/europa.html">Europa</a></li><li><a href="continentes/asia.html">Asia</a></li><li><a href="continentes/africa.html">África</a></li><li><a href="continentes/oceania.html">Oceanía</a></li></ul>
+    </nav>
+    <nav aria-label="Herramientas">
+      <p class="pie__titulo">Herramientas</p>
+      <ul>
+        <li><a href="index.html">Todos los países</a></li>
+        <li><a href="comparar.html">Comparador de países</a></li>
+        <li><a href="consejos.html">Consejos y checklist de valija</a></li>
+      </ul>
+    </nav>
+  </div>
+  <p class="contenedor pie__legal">Mundo a Pie · Ilustraciones y textos propios · Funciona sin conexión.</p>
+</footer>
+<script src="js/datos.js"></script>
+<script src="js/comparar.js"></script>
+</body>
+</html>

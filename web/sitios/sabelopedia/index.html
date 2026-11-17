@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sabelopedia – La enciclopedia sencilla para saber de todo</title>
+<meta name="description" content="Sabelopedia es una enciclopedia de divulgación con artículos sencillos sobre animales, espacio, historia, ciencia, tecnología y naturaleza.">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#f6f4ef" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#11151b" media="(prefers-color-scheme: dark)">
+<link rel="stylesheet" href="css/estilos.css">
+</head>
+<body data-raiz="" data-articulo="">
+<a class="saltar" href="#contenido">Saltar al contenido</a>
+<header class="cabecera">
+<div class="cabecera-interior">
+<a class="marca" href="index.html"><svg class="marca-icono" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><rect width="40" height="40" rx="11" fill="#1f5fae"/><path d="M8.5 12.5c4.2-1.7 8-1.5 11 .8v15.6c-3-2.1-6.8-2.3-11-.8z" fill="#ffffff"/><path d="M31.5 12.5c-4.2-1.7-8-1.5-11 .8v15.6c3-2.1 6.8-2.3 11-.8z" fill="#ffd166"/><circle cx="31" cy="9" r="3" fill="#ffd166"/></svg><span class="marca-texto"><span class="marca-nombre">Sabelopedia</span><span class="marca-lema">Saber de todo, fácil</span></span></a>
+
+</div>
+<nav class="nav-categorias" aria-label="Categorías"><ul><li><a href="categorias/animales.html"><span aria-hidden="true">🐾</span> Animales</a></li><li><a href="categorias/espacio.html"><span aria-hidden="true">🚀</span> Espacio</a></li><li><a href="categorias/historia.html"><span aria-hidden="true">🏺</span> Historia</a></li><li><a href="categorias/ciencia.html"><span aria-hidden="true">🔬</span> Ciencia</a></li><li><a href="categorias/tecnologia.html"><span aria-hidden="true">💡</span> Tecnología</a></li><li><a href="categorias/naturaleza.html"><span aria-hidden="true">🌿</span> Naturaleza</a></li><li class="nav-azar"><a href="articulos/pulpo.html" data-azar><span aria-hidden="true">🎲</span> Al azar</a></li></ul></nav>
+</header>
+<main id="contenido" tabindex="-1">
+<section class="portada-hero" aria-labelledby="titulo-portada">
+<h1 id="titulo-portada">Sabelopedia</h1>
+<p class="lema">La enciclopedia sencilla para saber de todo: animales, espacio, historia, ciencia, tecnología y naturaleza, explicados con palabras claras.</p>
+<form id="form-busqueda" class="busqueda" role="search" action="index.html" method="get">
+<label for="q" class="busqueda-etiqueta">Buscá un tema</label>
+<div class="busqueda-fila">
+<input id="q" name="q" type="search" placeholder="Por ejemplo: volcanes, Luna, abejas…" autocomplete="off" aria-describedby="ayuda-busqueda" aria-controls="resultados">
+<button type="submit">Buscar</button>
+</div>
+<p id="ayuda-busqueda" class="ayuda">Busca en títulos, resúmenes y categorías.</p>
+</form>
+<p id="resultados-estado" class="resultados-estado" role="status" aria-live="polite"></p>
+<p class="hero-acciones"><a class="boton boton-secundario" href="articulos/pulpo.html" data-azar><span aria-hidden="true">🎲</span> Artículo al azar</a>
+<span class="hero-dato">19 artículos · 6 categorías</span></p>
+</section>
+<section id="resultados" class="resultados" aria-labelledby="resultados-titulo" hidden>
+<div class="resultados-cabecera"><h2 id="resultados-titulo">Resultados de búsqueda</h2>
+<button type="button" id="limpiar-busqueda" class="boton-secundario">Limpiar búsqueda</button></div>
+<ul id="resultados-lista" class="lista-resultados"></ul>
+</section>
+<section class="destacado" aria-labelledby="destacado-titulo">
+<h2 id="destacado-titulo"><span aria-hidden="true">⭐</span> Artículo destacado</h2>
+<div class="destacado-tarjeta">
+<div class="destacado-imagen"><svg class="ilustracion-svg" viewBox="0 0 240 160" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Ilustración de un pulpo anaranjado en el fondo del mar" focusable="false"><defs><linearGradient id="pulpo-mar" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5ab4d6"/><stop offset="1" stop-color="#1b4f72"/></linearGradient></defs>
+<rect width="240" height="160" fill="url(#pulpo-mar)"/>
+<path d="M0 146 Q60 132 120 142 T240 140 V160 H0Z" fill="#e9d29a"/>
+<circle cx="40" cy="40" r="4" fill="#fff" opacity=".5"/><circle cx="52" cy="24" r="3" fill="#fff" opacity=".4"/><circle cx="192" cy="46" r="5" fill="#fff" opacity=".4"/><circle cx="200" cy="28" r="3" fill="#fff" opacity=".35"/>
+<g fill="none" stroke="#e8743b" stroke-width="9" stroke-linecap="round">
+<path d="M100 90 Q78 118 60 116 Q47 114 52 104"/><path d="M108 98 Q98 128 82 138"/><path d="M117 100 Q116 130 104 144"/>
+<path d="M124 100 Q130 130 142 142"/><path d="M132 98 Q146 124 162 130"/><path d="M140 90 Q164 114 180 108 Q191 102 184 94"/></g>
+<ellipse cx="120" cy="68" rx="34" ry="36" fill="#f08a4b"/>
+<circle cx="107" cy="72" r="7.5" fill="#fff"/><circle cx="133" cy="72" r="7.5" fill="#fff"/>
+<circle cx="108" cy="73" r="3.8" fill="#1d232b"/><circle cx="134" cy="73" r="3.8" fill="#1d232b"/>
+<path d="M112 88 Q120 94 128 88" stroke="#a8461d" stroke-width="3" fill="none" stroke-linecap="round"/>
+<circle cx="104" cy="50" r="4" fill="#f6b48a"/><circle cx="136" cy="46" r="3" fill="#f6b48a"/><circle cx="122" cy="40" r="2.5" fill="#f6b48a"/></svg></div>
+<div class="destacado-texto">
+<p class="tarjeta-cat">🐾 Animales</p>
+<h3><a href="articulos/pulpo.html">El pulpo</a></h3>
+<p>El <strong>pulpo</strong> es un animal marino sin huesos, con ocho brazos llenos de ventosas. Pertenece al grupo de los cefalópodos, como los calamares y las sepias, y es famoso por su inteligencia y por su capacidad para cambiar de color en un instante.</p>
+<p><a class="boton" href="articulos/pulpo.html">Leer el artículo completo</a></p>
+</div>
+</div>
+</section>
+<section class="categorias-portada" aria-labelledby="cats-titulo">
+<h2 id="cats-titulo">Explorá por categoría</h2>
+<div class="grilla-categorias">
+<section class="bloque-categoria cat-animales" aria-labelledby="cat-animales">
+<h3 id="cat-animales"><a href="categorias/animales.html"><span aria-hidden="true">🐾</span> Animales</a></h3>
+<p>Conocé cómo viven, qué comen y qué secretos esconden algunos de los animales más asombrosos del planeta, de los océanos a la sabana.</p>
+<ul><li><a href="articulos/abejas.html"><span aria-hidden="true">🐝</span> Las abejas</a></li><li><a href="articulos/elefante-africano.html"><span aria-hidden="true">🐘</span> El elefante africano</a></li><li><a href="articulos/pulpo.html"><span aria-hidden="true">🐙</span> El pulpo</a></li></ul>
+<p class="ver-todo"><a href="categorias/animales.html">Ver la categoría Animales <span aria-hidden="true">→</span></a></p>
+</section><section class="bloque-categoria cat-espacio" aria-labelledby="cat-espacio">
+<h3 id="cat-espacio"><a href="categorias/espacio.html"><span aria-hidden="true">🚀</span> Espacio</a></h3>
+<p>Planetas, lunas y misterios del universo explicados de forma sencilla, para mirar el cielo con otros ojos.</p>
+<ul><li><a href="articulos/agujeros-negros.html"><span aria-hidden="true">🌌</span> Los agujeros negros</a></li><li><a href="articulos/luna.html"><span aria-hidden="true">🌙</span> La Luna</a></li><li><a href="articulos/marte.html"><span aria-hidden="true">🔴</span> Marte</a></li></ul>
+<p class="ver-todo"><a href="categorias/espacio.html">Ver la categoría Espacio <span aria-hidden="true">→</span></a></p>
+</section><section class="bloque-categoria cat-historia" aria-labelledby="cat-historia">
+<h3 id="cat-historia"><a href="categorias/historia.html"><span aria-hidden="true">🏺</span> Historia</a></h3>
+<p>Grandes civilizaciones e inventos que cambiaron para siempre la forma de vivir de la humanidad.</p>
+<ul><li><a href="articulos/imperio-romano.html"><span aria-hidden="true">🏛️</span> El Imperio romano</a></li><li><a href="articulos/imprenta.html"><span aria-hidden="true">📖</span> La imprenta</a></li><li><a href="articulos/piramides-de-egipto.html"><span aria-hidden="true">🔺</span> Las pirámides de Egipto</a></li></ul>
+<p class="ver-todo"><a href="categorias/historia.html">Ver la categoría Historia <span aria-hidden="true">→</span></a></p>
+</section><section class="bloque-categoria cat-ciencia" aria-labelledby="cat-ciencia">
+<h3 id="cat-ciencia"><a href="categorias/ciencia.html"><span aria-hidden="true">🔬</span> Ciencia</a></h3>
+<p>Los fenómenos que hacen funcionar el mundo: del agua que tomamos y el aire que respiramos a la electricidad de casa.</p>
+<ul><li><a href="articulos/ciclo-del-agua.html"><span aria-hidden="true">💧</span> El agua y su ciclo</a></li><li><a href="articulos/electricidad.html"><span aria-hidden="true">⚡</span> La electricidad</a></li><li><a href="articulos/fotosintesis.html"><span aria-hidden="true">🌱</span> La fotosíntesis</a></li></ul>
+<p class="ver-todo"><a href="categorias/ciencia.html">Ver la categoría Ciencia <span aria-hidden="true">→</span></a></p>
+</section><section class="bloque-categoria cat-tecnologia" aria-labelledby="cat-tecnologia">
+<h3 id="cat-tecnologia"><a href="categorias/tecnologia.html"><span aria-hidden="true">💡</span> Tecnología</a></h3>
+<p>Las máquinas y las redes que usamos todos los días, cómo funcionan y cómo llegaron a existir.</p>
+<ul><li><a href="articulos/computadora.html"><span aria-hidden="true">💻</span> La computadora</a></li><li><a href="articulos/internet.html"><span aria-hidden="true">🌐</span> Internet</a></li><li><a href="articulos/robots.html"><span aria-hidden="true">🤖</span> Los robots</a></li></ul>
+<p class="ver-todo"><a href="categorias/tecnologia.html">Ver la categoría Tecnología <span aria-hidden="true">→</span></a></p>
+</section><section class="bloque-categoria cat-naturaleza" aria-labelledby="cat-naturaleza">
+<h3 id="cat-naturaleza"><a href="categorias/naturaleza.html"><span aria-hidden="true">🌿</span> Naturaleza</a></h3>
+<p>Selvas, océanos, volcanes y terremotos: la fuerza y la riqueza del planeta Tierra.</p>
+<ul><li><a href="articulos/amazonas.html"><span aria-hidden="true">🌳</span> El Amazonas</a></li><li><a href="articulos/arrecifes-de-coral.html"><span aria-hidden="true">🐠</span> Los arrecifes de coral</a></li><li><a href="articulos/terremotos.html"><span aria-hidden="true">🏚️</span> Los terremotos</a></li><li><a href="articulos/volcanes.html"><span aria-hidden="true">🌋</span> Los volcanes</a></li></ul>
+<p class="ver-todo"><a href="categorias/naturaleza.html">Ver la categoría Naturaleza <span aria-hidden="true">→</span></a></p>
+</section>
+</div>
+</section>
+<section class="acerca" aria-labelledby="acerca-titulo">
+<h2 id="acerca-titulo">¿Qué es Sabelopedia?</h2>
+<p>Sabelopedia es una enciclopedia de divulgación pensada para estudiantes, familias y cualquier persona curiosa. Cada artículo tiene un resumen, un índice, un cuadro con los datos más importantes, curiosidades y enlaces para seguir aprendiendo.</p>
+<p>Todo el sitio funciona sin conexión a internet: podés abrirlo directamente desde tu computadora.</p>
+</section>
+</main>
+<footer class="pie">
+<div class="pie-interior">
+<div>
+<p class="pie-marca"><svg class="marca-icono" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><rect width="40" height="40" rx="11" fill="#1f5fae"/><path d="M8.5 12.5c4.2-1.7 8-1.5 11 .8v15.6c-3-2.1-6.8-2.3-11-.8z" fill="#ffffff"/><path d="M31.5 12.5c-4.2-1.7-8-1.5-11 .8v15.6c3-2.1 6.8-2.3 11-.8z" fill="#ffd166"/><circle cx="31" cy="9" r="3" fill="#ffd166"/></svg> Sabelopedia</p>
+<p>Una enciclopedia de divulgación con información sencilla para curiosos de todas las edades. Los textos están pensados para leerse fácil y, a veces, simplifican temas complejos.</p>
+</div>
+<nav aria-label="Categorías en el pie de página">
+<p class="pie-titulo">Categorías</p>
+<ul><li><a href="categorias/animales.html">Animales</a></li><li><a href="categorias/espacio.html">Espacio</a></li><li><a href="categorias/historia.html">Historia</a></li><li><a href="categorias/ciencia.html">Ciencia</a></li><li><a href="categorias/tecnologia.html">Tecnología</a></li><li><a href="categorias/naturaleza.html">Naturaleza</a></li></ul>
+</nav>
+</div>
+<p class="pie-legal">Sabelopedia · Contenido educativo hecho con HTML, CSS y JavaScript. Funciona sin conexión.</p>
+</footer>
+<script src="js/datos.js"></script>
+<script src="js/sitio.js"></script>
+<script src="js/buscador.js"></script>
+</body>
+</html>

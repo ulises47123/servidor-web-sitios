@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Panqueques – La Olla</title>
+<meta name="description" content="Receta de panqueques caseros finitos para rellenar con dulce de leche. Cómo preparar la mezcla sin grumos, cuánto dejarla reposar y cómo darlos vuelta en la panquequera.">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#fbf6ef" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#1b1611" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../css/estilos.css">
+<script src="../js/receta.js" defer></script>
+</head>
+<body>
+<a class="saltar" href="#contenido">Saltar al contenido</a>
+<header class="cabecera">
+  <div class="contenedor">
+    <a class="marca" href="../index.html"><svg viewBox="0 0 32 32" width="32" height="32" aria-hidden="true" focusable="false"><path d="M11 7 q-2 -2 0 -4 M16 7 q-2 -2 0 -4 M21 7 q-2 -2 0 -4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" opacity=".7"/><rect x="3" y="11" width="26" height="3" rx="1.5" fill="currentColor"/><path d="M5 15 h22 v6 a7 7 0 0 1 -7 7 h-8 a7 7 0 0 1 -7 -7 z" fill="currentColor"/><rect x="1" y="16" width="4" height="3" rx="1.5" fill="currentColor"/><rect x="27" y="16" width="4" height="3" rx="1.5" fill="currentColor"/><rect x="14" y="8" width="4" height="3" rx="1.5" fill="currentColor"/></svg><span>La Olla</span></a>
+    <nav class="nav-principal" aria-label="Principal">
+      <ul><li><a href="../index.html">Inicio</a></li><li><a href="../index.html#recetas">Recetas</a></li><li><a href="../categorias/index.html">Categorías</a></li></ul>
+    </nav>
+  </div>
+</header>
+<main id="contenido" tabindex="-1">
+<div class="contenedor">
+<nav class="migas" aria-label="Ruta de navegación"><ol><li><a href="../index.html">Inicio</a></li><li><a href="../categorias/postres.html">Postres</a></li><li><span aria-current="page">Panqueques</span></li></ol></nav>
+<article class="receta">
+  <header class="receta-cabecera">
+    <div>
+      <h1>Panqueques</h1>
+      <p class="descripcion">Panqueques finitos y tiernos para rellenar con dulce de leche, o con relleno salado si preferís.</p>
+      <dl class="datos">
+        <div><dt>Tiempo total</dt><dd><time datetime="PT45M">45 min</time></dd></div>
+        <div><dt>Rinde</dt><dd>12 panqueques</dd></div>
+        <div><dt>Dificultad</dt><dd>Fácil</dd></div>
+        <div><dt>Categoría</dt><dd><a href="../categorias/postres.html">Postres</a></dd></div>
+      </dl>
+      <p class="nota-tiempo">Incluye 30 minutos de reposo de la mezcla.</p>
+      <div class="acciones">
+        <button type="button" class="boton" id="btn-modo-cocina" hidden><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><rect x="2" y="2" width="12" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M6 5.5 L10.5 8 L6 10.5 Z" fill="currentColor"/></svg>Modo cocina</button>
+        <button type="button" class="boton boton-sec" id="btn-imprimir" hidden><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 6 V2 h8 v4" fill="none" stroke="currentColor" stroke-width="1.6"/><rect x="1.5" y="6" width="13" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.6"/><rect x="4.5" y="9.5" width="7" height="5" fill="currentColor"/></svg>Imprimir</button>
+      </div>
+    </div>
+    <div class="ilustracion-grande"><svg class="ilustra" viewBox="0 0 240 160" width="240" height="160" aria-hidden="true" focusable="false"><ellipse cx="120" cy="105" rx="102" ry="48" fill="#5a3a1f" opacity=".13"/><ellipse cx="120" cy="96" rx="100" ry="50" fill="#fffaf2" stroke="#e1d1bb" stroke-width="3"/><ellipse cx="120" cy="96" rx="72" ry="34" fill="none" stroke="#efe3d1" stroke-width="2"/><g stroke="#c9923e" stroke-width="2"><ellipse cx="104" cy="108" rx="54" ry="18" fill="#e3ad5a"/><ellipse cx="104" cy="102" rx="54" ry="18" fill="#e8b766"/><ellipse cx="104" cy="96" rx="54" ry="18" fill="#ebbd70"/><ellipse cx="104" cy="90" rx="54" ry="18" fill="#efc57c"/></g><path d="M80 88 C82 78 126 76 130 88 C132 96 126 96 124 102 C122 108 118 96 112 98 C104 100 100 106 96 98 C92 92 80 96 80 88 Z" fill="#9a5a26"/><g transform="rotate(-12 178 100)"><rect x="152" y="92" width="50" height="20" rx="10" fill="#e3ad5a" stroke="#c9923e" stroke-width="2"/><ellipse cx="202" cy="102" rx="6" ry="10" fill="#efc57c" stroke="#c9923e" stroke-width="2"/><ellipse cx="202" cy="102" rx="2.5" ry="5" fill="#9a5a26"/></g></svg></div>
+  </header>
+
+  <div class="receta-cuerpo">
+    <section class="panel-ingredientes" aria-labelledby="titulo-ingredientes">
+      <h2 id="titulo-ingredientes">Ingredientes</h2>
+      <div class="calculadora" data-porciones-base="12">
+        <span class="calc-etiqueta">Cantidades para</span>
+        <button type="button" class="calc-btn" data-paso="-1" aria-label="Menos panqueques" hidden>−</button>
+        <output aria-live="polite"><span class="porciones-num">12</span> <span class="pl" data-s="panqueque" data-p="panqueques">panqueques</span></output>
+        <button type="button" class="calc-btn" data-paso="1" aria-label="Más panqueques" hidden>+</button>
+        <button type="button" class="boton-texto calc-reset" hidden>Volver a 12 panqueques</button>
+      </div>
+      <p class="calc-nota" hidden>Los ingredientes «a gusto» no se recalculan. Si cambiás mucho las cantidades, revisá el tamaño del molde o de la olla y los tiempos de cocción.</p>
+<ul class="ingredientes">
+<li><label><input type="checkbox" id="ing-1"><span><span class="cant" data-base="150" data-tipo="m">150</span> g de harina 0000</span></label></li>
+<li><label><input type="checkbox" id="ing-2"><span><span class="cant" data-base="2" data-tipo="u">2</span> <span class="pl" data-s="huevo" data-p="huevos">huevos</span></span></label></li>
+<li><label><input type="checkbox" id="ing-3"><span><span class="cant" data-base="350" data-tipo="m">350</span> ml de leche</span></label></li>
+<li><label><input type="checkbox" id="ing-4"><span><span class="cant" data-base="20" data-tipo="m">20</span> g de manteca derretida, y un poco más para la sartén</span></label></li>
+<li><label><input type="checkbox" id="ing-5"><span>Una pizca de sal</span></label></li>
+<li><label><input type="checkbox" id="ing-6"><span>Dulce de leche para rellenar, a gusto</span></label></li>
+</ul>
+    </section>
+
+    <div class="receta-preparacion">
+      <section aria-labelledby="titulo-pasos">
+        <h2 id="titulo-pasos">Preparación</h2>
+        <ol class="pasos">
+<li>Licuá o batí con batidor de mano la harina, los huevos, la leche, la manteca derretida y la sal, hasta que no queden grumos.</li>
+<li>Dejá reposar la mezcla 30 minutos en la heladera. Así los panqueques quedan más tiernos y no se rompen.</li>
+<li>Calentá una panquequera o sartén de 20 cm a fuego medio y pincelala con manteca.</li>
+<li>Volcá un cucharón chico de mezcla y girá enseguida la sartén para cubrir todo el fondo con una capa fina.</li>
+<li>Cociná alrededor de un minuto, hasta que los bordes se despeguen. Dalo vuelta con una espátula y cociná 30 segundos más.</li>
+<li>Apilá los panqueques en un plato. Rellenalos con dulce de leche y enrollalos o doblalos en cuatro.</li>
+        </ol>
+      </section>
+      <section class="consejos" aria-labelledby="titulo-consejos">
+        <h2 id="titulo-consejos">Consejos</h2>
+        <ul>
+<li>El primer panqueque casi siempre sale feo: sirve para ajustar el fuego y la cantidad de mezcla.</li>
+<li>Para una versión quemada, espolvoreá azúcar sobre los panqueques rellenos y caramelizala con un soplete o bajo el grill.</li>
+<li>Se pueden hacer con anticipación: apilados con papel manteca entre cada uno, aguantan 2 días en la heladera.</li>
+        </ul>
+      </section>
+    </div>
+  </div>
+</article>
+
+<section class="relacionadas" aria-labelledby="titulo-relacionadas">
+  <h2 id="titulo-relacionadas">También te puede gustar</h2>
+  <ul class="grilla">
+<li class="tarjeta" data-categoria="postres" data-dificultad="Media" data-tiempo="330" data-buscar="flan casero postres flan de huevo cremoso con caramelo, cocinado a bano maria. para servir con dulce de leche o crema. 1000 ml de leche entera 8 huevos 200 g de azucar 1 cucharadita de esencia de vainilla 150 g de azucar 3 cucharadas de agua dulce de leche o crema batida, a gusto">
+  <div class="ilustracion"><svg class="ilustra" viewBox="0 0 240 160" width="240" height="160" aria-hidden="true" focusable="false"><ellipse cx="120" cy="105" rx="102" ry="48" fill="#5a3a1f" opacity=".13"/><ellipse cx="120" cy="96" rx="100" ry="50" fill="#fffaf2" stroke="#e1d1bb" stroke-width="3"/><ellipse cx="120" cy="96" rx="72" ry="34" fill="none" stroke="#efe3d1" stroke-width="2"/><ellipse cx="120" cy="110" rx="58" ry="13" fill="#9b5520" opacity=".9"/><path d="M78 110 L92 58 Q120 50 148 58 L162 110 Q120 122 78 110 Z" fill="#f2c461" stroke="#d9a43a" stroke-width="2"/><path d="M84 90 Q86 74 92 62" fill="none" stroke="#f8dc93" stroke-width="5" stroke-linecap="round"/><ellipse cx="120" cy="58" rx="28" ry="7" fill="#8a4a1a"/><path d="M93 59 Q95 72 98 64 Q101 78 105 63 Q110 70 114 64 Q120 82 126 64 Q131 72 135 63 Q139 76 142 63 Q145 70 147 59 Z" fill="#8a4a1a"/><path d="M176 108 C168 106 168 96 178 94 C186 90 196 96 192 104 C190 110 182 110 176 108 Z" fill="#a8662d" stroke="#874f20" stroke-width="1.5"/></svg></div>
+  <div class="tarjeta-cuerpo">
+    <span class="etiqueta">Postres</span>
+    <h3><a href="../recetas/flan-casero.html">Flan casero</a></h3>
+    <p>Flan de huevo cremoso con caramelo, cocinado a baño María. Para servir con dulce de leche o crema.</p>
+    <ul class="meta">
+      <li><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M8 4.5 V8 L10.5 9.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span class="vh">Tiempo total: </span>5 h 30 min</li>
+      <li><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><rect x="2" y="9" width="3" height="5" rx="1" fill="currentColor"/><rect x="6.5" y="6" width="3" height="8" rx="1" fill="currentColor"/><rect x="11" y="3" width="3" height="11" rx="1" fill="currentColor"/></svg><span class="vh">Dificultad: </span>Media</li>
+      <li><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="5" r="2.8" fill="currentColor"/><path d="M2.5 14 a5.5 5 0 0 1 11 0 z" fill="currentColor"/></svg><span class="vh">Rinde: </span>8 porciones</li>
+    </ul>
+  </div>
+</li>
+<li class="tarjeta" data-categoria="postres" data-dificultad="Fácil" data-tiempo="50" data-buscar="brownies postres brownies de chocolate con costrita brillante arriba y centro denso y humedo. con o sin nueces. 200 g de chocolate semiamargo 150 g de manteca 250 g de azucar 3 huevos 1 cucharadita de esencia de vainilla 100 g de harina 0000 30 g de cacao amargo una pizca de sal 100 g de nueces picadas (opcional)">
+  <div class="ilustracion"><svg class="ilustra" viewBox="0 0 240 160" width="240" height="160" aria-hidden="true" focusable="false"><ellipse cx="120" cy="105" rx="102" ry="48" fill="#5a3a1f" opacity=".13"/><ellipse cx="120" cy="96" rx="100" ry="50" fill="#fffaf2" stroke="#e1d1bb" stroke-width="3"/><ellipse cx="120" cy="96" rx="72" ry="34" fill="none" stroke="#efe3d1" stroke-width="2"/><g stroke="#3e2216" stroke-width="2"><rect x="62" y="82" width="50" height="34" rx="4" fill="#5a3321"/><rect x="122" y="86" width="50" height="34" rx="4" fill="#5a3321"/><rect x="92" y="54" width="50" height="34" rx="4" fill="#5a3321"/></g><g fill="#7a4732"><rect x="64" y="84" width="46" height="8" rx="3"/><rect x="124" y="88" width="46" height="8" rx="3"/><rect x="94" y="56" width="46" height="8" rx="3"/></g><g fill="none" stroke="#9a6247" stroke-width="1.2" stroke-linecap="round"><path d="M70 88 l8 2 l6 -2"/><path d="M132 92 l7 1 l8 -2"/><path d="M100 60 l9 2 l7 -2 l6 1"/></g><g fill="#c99a5b"><ellipse cx="80" cy="104" rx="4" ry="2.5"/><ellipse cx="146" cy="108" rx="4" ry="2.5"/><ellipse cx="114" cy="76" rx="4" ry="2.5"/><ellipse cx="96" cy="100" rx="3" ry="2"/><ellipse cx="128" cy="72" rx="3" ry="2"/></g></svg></div>
+  <div class="tarjeta-cuerpo">
+    <span class="etiqueta">Postres</span>
+    <h3><a href="../recetas/brownies.html">Brownies</a></h3>
+    <p>Brownies de chocolate con costrita brillante arriba y centro denso y húmedo. Con o sin nueces.</p>
+    <ul class="meta">
+      <li><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M8 4.5 V8 L10.5 9.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span class="vh">Tiempo total: </span>50 min</li>
+      <li><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><rect x="2" y="9" width="3" height="5" rx="1" fill="currentColor"/><rect x="6.5" y="6" width="3" height="8" rx="1" fill="currentColor"/><rect x="11" y="3" width="3" height="11" rx="1" fill="currentColor"/></svg><span class="vh">Dificultad: </span>Fácil</li>
+      <li><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="5" r="2.8" fill="currentColor"/><path d="M2.5 14 a5.5 5 0 0 1 11 0 z" fill="currentColor"/></svg><span class="vh">Rinde: </span>16 cuadraditos</li>
+    </ul>
+  </div>
+</li>
+<li class="tarjeta" data-categoria="postres" data-dificultad="Media" data-tiempo="90" data-buscar="alfajores de maicena postres alfajores de maicena que se deshacen en la boca, rellenos con dulce de leche y con el borde pasado por coco. 200 g de manteca a temperatura ambiente 150 g de azucar 3 yemas 300 g de almidon de maiz (maicena) 200 g de harina 0000 2 cucharaditas de polvo de hornear 1 cucharadita de esencia de vainilla 1 cucharada de conac (opcional) 1 limon, solo la ralladura 400 g de dulce de leche repostero 50 g de coco rallado">
+  <div class="ilustracion"><svg class="ilustra" viewBox="0 0 240 160" width="240" height="160" aria-hidden="true" focusable="false"><ellipse cx="120" cy="105" rx="102" ry="48" fill="#5a3a1f" opacity=".13"/><ellipse cx="120" cy="96" rx="100" ry="50" fill="#fffaf2" stroke="#e1d1bb" stroke-width="3"/><ellipse cx="120" cy="96" rx="72" ry="34" fill="none" stroke="#efe3d1" stroke-width="2"/><g><rect x="56" y="98" width="76" height="15" rx="7" fill="#f5e3bd" stroke="#d8bd8b" stroke-width="2"/><rect x="58" y="89" width="72" height="11" rx="5" fill="#a5652a"/><rect x="56" y="76" width="76" height="15" rx="7" fill="#f5e3bd" stroke="#d8bd8b" stroke-width="2"/><g fill="#ffffff"><circle cx="62" cy="94" r="1.8"/><circle cx="70" cy="96" r="1.8"/><circle cx="78" cy="93" r="1.8"/><circle cx="86" cy="96" r="1.8"/><circle cx="94" cy="94" r="1.8"/><circle cx="102" cy="96" r="1.8"/><circle cx="110" cy="93" r="1.8"/><circle cx="118" cy="96" r="1.8"/><circle cx="126" cy="94" r="1.8"/></g></g><circle cx="168" cy="96" r="27" fill="#a5652a"/><circle cx="168" cy="94" r="25" fill="#f7e8c6" stroke="#d8bd8b" stroke-width="2"/><g fill="#fffdf6"><circle cx="160" cy="86" r="2"/><circle cx="172" cy="90" r="1.6"/><circle cx="164" cy="100" r="1.8"/><circle cx="178" cy="100" r="1.5"/><circle cx="170" cy="80" r="1.5"/></g></svg></div>
+  <div class="tarjeta-cuerpo">
+    <span class="etiqueta">Postres</span>
+    <h3><a href="../recetas/alfajores-de-maicena.html">Alfajores de maicena</a></h3>
+    <p>Alfajores de maicena que se deshacen en la boca, rellenos con dulce de leche y con el borde pasado por coco.</p>
+    <ul class="meta">
+      <li><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M8 4.5 V8 L10.5 9.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span class="vh">Tiempo total: </span>1 h 30 min</li>
+      <li><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><rect x="2" y="9" width="3" height="5" rx="1" fill="currentColor"/><rect x="6.5" y="6" width="3" height="8" rx="1" fill="currentColor"/><rect x="11" y="3" width="3" height="11" rx="1" fill="currentColor"/></svg><span class="vh">Dificultad: </span>Media</li>
+      <li><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="5" r="2.8" fill="currentColor"/><path d="M2.5 14 a5.5 5 0 0 1 11 0 z" fill="currentColor"/></svg><span class="vh">Rinde: </span>20 alfajores</li>
+    </ul>
+  </div>
+</li>
+  </ul>
+</section>
+</div>
+</main>
+<footer class="pie">
+  <div class="contenedor">
+    <nav aria-label="Categorías del recetario">
+      <ul><li><a href="../categorias/platos-principales.html">Platos principales</a></li><li><a href="../categorias/pastas.html">Pastas</a></li><li><a href="../categorias/sopas-y-guisos.html">Sopas y guisos</a></li><li><a href="../categorias/ensaladas.html">Ensaladas</a></li><li><a href="../categorias/postres.html">Postres</a></li><li><a href="../categorias/panaderia.html">Panadería</a></li><li><a href="../categorias/bebidas.html">Bebidas</a></li></ul>
+    </nav>
+    <p>La Olla · Recetario casero. Recetas probadas, explicadas sin vueltas y pensadas para cocinar en casa.</p>
+  </div>
+</footer>
+</body>
+</html>

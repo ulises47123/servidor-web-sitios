@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mis tableros – Pinar</title>
+<meta name="description" content="Tus tableros de Pinar: guardá ideas en colecciones con nombre, revisalas cuando quieras y quitá las que ya no necesites.">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#f6f3ee" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#151917" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="icono.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/estilos.css">
+</head>
+<body data-raiz="">
+<a class="saltar" href="#contenido">Saltar al contenido</a>
+<header class="barra">
+<div class="contenedor barra-fila">
+<a class="logo" href="index.html"><svg viewBox="0 0 40 40" width="34" height="34" aria-hidden="true" focusable="false"><rect width="40" height="40" rx="12" fill="#2f6b5a"/><path d="M20 9.5L27.5 19.5H23.5L29.5 28H10.5L16.5 19.5H12.5Z" fill="#f6f3ee"/><rect x="18.4" y="28" width="3.2" height="5" rx="1" fill="#f6f3ee"/><circle cx="20" cy="9" r="3.6" fill="#e8846a"/></svg><span>Pinar</span><span class="visualmente-oculto"> — inicio</span></a>
+<form class="buscador" id="form-buscar" role="search" action="index.html" method="get">
+<label for="buscar" class="visualmente-oculto">Buscar ideas por título o etiqueta</label>
+<svg class="icono-lupa" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M15.5 15.5L21 21" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
+<input id="buscar" name="q" type="search" placeholder="Buscar: macetas, origami, frascos…" autocomplete="off" enterkeyhint="search">
+
+</form>
+<a class="enlace-tableros" href="tableros.html" aria-current="page">Mis tableros <span class="contador" id="contador-tableros" aria-hidden="true"></span><span class="visualmente-oculto" id="contador-tableros-texto"></span></a>
+</div>
+<nav aria-label="Categorías">
+<ul class="chips">
+<li><a class="chip" href="index.html">Todo</a></li>
+<li><a class="chip" href="categorias/manualidades.html">Manualidades</a></li>
+<li><a class="chip" href="categorias/decoracion.html">Decoración</a></li>
+<li><a class="chip" href="categorias/plantas.html">Plantas</a></li>
+<li><a class="chip" href="categorias/frases.html">Frases</a></li>
+<li><a class="chip" href="categorias/organizacion.html">Organización</a></li>
+<li><a class="chip" href="categorias/cocina-rapida.html">Cocina rápida</a></li>
+<li><a class="chip" href="categorias/dibujo.html">Dibujo</a></li>
+</ul>
+</nav>
+</header>
+<main id="contenido">
+<div class="contenedor intro">
+<h1 id="titulo-pagina" tabindex="-1">Mis tableros</h1>
+<p>Acá están las ideas que guardaste, organizadas en tableros. Se guardan en este navegador: no hace falta crear una cuenta.</p>
+</div>
+<div class="contenedor">
+<p class="aviso" id="aviso-almacenamiento" hidden>Tu navegador no permite guardar datos en este sitio, así que los tableros van a durar solo mientras tengas la página abierta.</p>
+<section class="panel-nuevo" aria-labelledby="titulo-nuevo">
+<h2 id="titulo-nuevo" class="visualmente-oculto">Crear un tablero</h2>
+<form class="form-nuevo" id="form-crear" novalidate>
+<label for="nombre-tablero">Crear un tablero nuevo</label>
+<input id="nombre-tablero" name="nombre" type="text" maxlength="60" autocomplete="off" placeholder="Por ejemplo: Recetas para la semana">
+<button type="submit" class="boton boton-verde">Crear tablero</button>
+</form>
+</section>
+<div id="tableros">
+<noscript><p class="vacio">Para crear y ver tableros necesitás tener JavaScript activado.</p></noscript>
+</div>
+</div>
+</main>
+<footer class="pie">
+<div class="contenedor">
+<nav aria-labelledby="pie-categorias">
+<h2 id="pie-categorias">Explorar por categoría</h2>
+<ul>
+<li><a href="categorias/manualidades.html">Manualidades</a></li>
+<li><a href="categorias/decoracion.html">Decoración</a></li>
+<li><a href="categorias/plantas.html">Plantas</a></li>
+<li><a href="categorias/frases.html">Frases</a></li>
+<li><a href="categorias/organizacion.html">Organización</a></li>
+<li><a href="categorias/cocina-rapida.html">Cocina rápida</a></li>
+<li><a href="categorias/dibujo.html">Dibujo</a></li>
+</ul>
+</nav>
+<p><a href="index.html">Todas las ideas</a> · <a href="tableros.html">Mis tableros</a></p>
+<p>Pinar es un tablero de ideas para hacer, ordenar y disfrutar en casa. Todas las ilustraciones son propias, dibujadas con SVG. Tus tableros se guardan solo en este navegador.</p>
+</div>
+</footer>
+<script src="js/datos.js"></script>
+<script src="js/tableros.js"></script>
+<script src="js/app.js"></script>
+<script src="js/pagina-tableros.js"></script>
+</body>
+</html>
